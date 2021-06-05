@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS Homework(
+    homeworkID UUID PRIMARY KEY NOT NULL,
+    lessonID UUID NOT NULL,
+    task TEXT NOT NULL,
+    FOREIGN KEY(lessonID) REFERENCES Lesson(lessonID)
+)
