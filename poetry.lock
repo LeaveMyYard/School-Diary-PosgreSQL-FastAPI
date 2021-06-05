@@ -18,6 +18,14 @@ python-versions = ">=3.6"
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
+name = "asn1crypto"
+version = "1.4.0"
+description = "Fast ASN.1 parser and serializer with definitions for private keys, public keys, certificates, CRL, OCSP, CMS, PKCS#3, PKCS#7, PKCS#8, PKCS#12, PKCS#5, X.509 and TSP"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "click"
 version = "8.0.1"
 description = "Composable command line interface toolkit"
@@ -109,12 +117,15 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
-name = "py-postgresql"
-version = "1.2.2"
-description = "PostgreSQL driver and tools library."
+name = "pg8000"
+version = "1.19.5"
+description = "PostgreSQL interface library"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
+
+[package.dependencies]
+scramp = "1.4.0"
 
 [[package]]
 name = "pydantic"
@@ -141,6 +152,17 @@ python-versions = "*"
 
 [package.dependencies]
 six = ">=1.4.0"
+
+[[package]]
+name = "scramp"
+version = "1.4.0"
+description = "An implementation of the SCRAM protocol."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+asn1crypto = "1.4.0"
 
 [[package]]
 name = "six"
@@ -219,7 +241,7 @@ standard = ["websockets (>=9.1)", "httptools (>=0.2.0,<0.3.0)", "watchgod (>=0.6
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f9aee82ac44cd5c8ad76cefd9ccc4db101482f8d57c2797c35a94ac9b4aeb544"
+content-hash = "77031f27ce03c28e4be0fcadfdafdcc2820abd756179825f4d3a464774e2e6a5"
 
 [metadata.files]
 aiofiles = [
@@ -229,6 +251,10 @@ aiofiles = [
 asgiref = [
     {file = "asgiref-3.3.4-py3-none-any.whl", hash = "sha256:92906c611ce6c967347bbfea733f13d6313901d54dcca88195eaeb52b2a8e8ee"},
     {file = "asgiref-3.3.4.tar.gz", hash = "sha256:d1216dfbdfb63826470995d31caed36225dcaf34f182e0fa257a4dd9e86f1b78"},
+]
+asn1crypto = [
+    {file = "asn1crypto-1.4.0-py2.py3-none-any.whl", hash = "sha256:4bcdf33c861c7d40bdcd74d8e4dd7661aac320fcdf40b9a3f95b4ee12fde2fa8"},
+    {file = "asn1crypto-1.4.0.tar.gz", hash = "sha256:f4f6e119474e58e04a2b1af817eb585b4fd72bdd89b998624712b5c99be7641c"},
 ]
 click = [
     {file = "click-8.0.1-py3-none-any.whl", hash = "sha256:fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6"},
@@ -341,8 +367,9 @@ markupsafe = [
     {file = "MarkupSafe-2.0.1-cp39-cp39-win_amd64.whl", hash = "sha256:693ce3f9e70a6cf7d2fb9e6c9d8b204b6b39897a2c4a1aa65728d5ac97dcc1d8"},
     {file = "MarkupSafe-2.0.1.tar.gz", hash = "sha256:594c67807fb16238b30c44bdf74f36c02cdf22d1c8cda91ef8a0ed8dabf5620a"},
 ]
-py-postgresql = [
-    {file = "py-postgresql-1.2.2.tar.gz", hash = "sha256:321a40123ee4a2afd07d26b96f466302308d709f71b4a71baa60468b0ed281d3"},
+pg8000 = [
+    {file = "pg8000-1.19.5-py3-none-any.whl", hash = "sha256:f750fc6c7acab10a399d27fed2732b0f380f0012eeb054ba1637519c190255b3"},
+    {file = "pg8000-1.19.5.tar.gz", hash = "sha256:dcb9afb9cb87acc79388ae633c45cf7f806aabe3bb5d8cf154572b699393f937"},
 ]
 pydantic = [
     {file = "pydantic-1.8.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:05ddfd37c1720c392f4e0d43c484217b7521558302e7069ce8d318438d297739"},
@@ -370,6 +397,10 @@ pydantic = [
 ]
 python-multipart = [
     {file = "python-multipart-0.0.5.tar.gz", hash = "sha256:f7bb5f611fc600d15fa47b3974c8aa16e93724513b49b5f95c81e6624c83fa43"},
+]
+scramp = [
+    {file = "scramp-1.4.0-py3-none-any.whl", hash = "sha256:27349d6839038fe3b56c641ea2a8703df065c1d605fdee67275857c0a82122b4"},
+    {file = "scramp-1.4.0.tar.gz", hash = "sha256:d27d768408c6fc025a0e567eed84325b0aaf24364c81ea5974e8334ae3c4fda3"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},

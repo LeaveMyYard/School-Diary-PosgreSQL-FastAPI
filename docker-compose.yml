@@ -2,6 +2,7 @@ version: "2"
 services:
     app:
         image: app
+        container_name: fastapi_container
         build: .
         ports:
             - "8000:8000"
@@ -10,3 +11,35 @@ services:
         volumes:
             - ./:/app
         restart: always
+    postgres:
+        container_name: postgres_container
+        image: postgres
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER:-postgres}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-qweR1tyFUn123}
+            PGDATA: /data/postgres
+        volumes:
+            - postgres:/data/postgres
+        ports:
+            - "5433:5432"
+        restart: unless-stopped
+
+    pgadmin:
+        container_name: pgadmin_container
+        image: dpage/pgadmin4
+        environment:
+            PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+            PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+            PGADMIN_CONFIG_SERVER_MODE: "False"
+        volumes:
+            - pgadmin:/root/.pgadmin
+
+        ports:
+            - "${PGADMIN_PORT:-5050}:80"
+        restart: unless-stopped
+        logging:
+            driver: none
+
+volumes:
+    postgres:
+    pgadmin:
