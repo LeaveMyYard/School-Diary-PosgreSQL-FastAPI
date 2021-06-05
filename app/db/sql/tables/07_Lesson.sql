@@ -7,5 +7,7 @@ CREATE TABLE IF NOT EXISTS Lesson(
         AND lessonNumber < 9
     ),
     date DATE NOT NULL,
-    audience INTEGER CHECK (audience > 0)
+    audience INTEGER CHECK (audience > 0),
+    FOREIGN KEY(courseID) REFERENCES Course(courseID),
+    FOREIGN KEY(classID) REFERENCES Class(classID)
 )
