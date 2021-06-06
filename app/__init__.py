@@ -1,9 +1,11 @@
+from app.schemas.teacher import TeacherModel
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-from app import routes, db
+from app import routes, db, crud
+from datetime import date
 
 app = FastAPI(debug=True)
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -27,3 +29,4 @@ async def validation_exception_handler(request, exc):
 def on_startup() -> None:
     connection = db.connect("postgres", "qweR1tyFUn123")
     db.init_database(connection)
+    db.add_default_data(connection)

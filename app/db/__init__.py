@@ -2,6 +2,7 @@ from typing import Any
 import pg8000.native
 import pg8000
 import os
+import csv
 
 
 def connect(user: str, password: str) -> pg8000.Connection:
@@ -22,3 +23,15 @@ def init_database(connection: pg8000.Connection) -> None:
                     connection.run(sql)
                 except pg8000.exceptions.DatabaseError as script_error:
                     raise RuntimeError(script_full) from script_error
+
+
+def add_default_data(connection: pg8000.Connection) -> None:
+    data_dir = "app/db/data"
+    data_tables = os.listdir(data_dir)
+    for data_table in sorted(data_tables):
+        table_name = data_table.split("_")[1].split(".")[0]
+        file_loc = os.path.join(data_dir, data_table)
+        with open(file_loc, "rb") as file:
+            connection.run(
+                f"COPY {table_name} FROM STDIN WITH (FORMAT CSV)", stream=file
+            )
