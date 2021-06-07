@@ -15,6 +15,7 @@ class TeacherPageCBV(BasePageWithAuthCBV):
     @router.get("/{teacher_id}/")
     def get_login_page(self, teacher_id: uuid.UUID) -> Any:
         teacher = crud.teacher.get(self.db, id=teacher_id)
+        courses = crud.course.get_multi_by_teacher(self.db, teacher_id=teacher_id)
         if teacher is None:
             raise HTTPException(404, detail="No teacher with such id")
-        return self._create_template("teacher.jinja", teacher=teacher)
+        return self._create_template("teacher.jinja", teacher=teacher, courses=courses)

@@ -15,6 +15,4 @@ router = InferringRouter()
 class IndexPageCBV(BasePageWithAuthCBV):
     @router.get("/")
     def get_index_page(self) -> Any:
-        return self._create_template(
-            "index.jinja", username=self.username, panel_type="Student"
-        )
+        return self._create_template("index.jinja")

@@ -1,65 +1,66 @@
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
-    <title>Navbar Template for Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', path='/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', path='/css/navbar.css') }}" rel="stylesheet">
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">{{panel_type}} panel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown07">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-          <span class="navbar-text">
-            Welcome, {{teacher.full_name}}!
-          </span>
+{% include "header.jinja"%}
+    <link href="{{ url_for('static', path='/css/teacher.css') }}" rel="stylesheet">
+    <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h5 class="f-w-600">{{ teacher.full_name }}</h5>
+                                <h6 class="f-w-600">Teacher, {{ teacher.status }}</h6>
+                                <p>{{ teacher.additional_info }}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h5>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Email</p>
+                                        <h5 class="text-muted f-w-400"> {{ teacher.email }} </h5>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Phone</p>
+                                        <h5 class="text-muted f-w-400"> {{ teacher.phone_number }}</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Sex</p>
+                                        <h5 class="text-muted f-w-400"> {{ teacher.sex }}</h5>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600"> Birthday </p>
+                                        <h5 class="text-muted f-w-400"> {{ teacher.date_of_birth }} </h5>
+                                    </div>
+                                </div>
+                                <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Course name</th>
+                                      <th scope="col">Course links</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for course in courses %}
+                                      <tr>
+                                        <td> {{ course.course_name }} </td>
+                                        <td> <a href="/course/{{ course.course_id }}/" class="btn btn-sm btn-outline-dark"> Course page </a> </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
+    </div>
+</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+{% include "footer.jinja" %}

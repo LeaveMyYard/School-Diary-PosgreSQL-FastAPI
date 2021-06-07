@@ -12,8 +12,11 @@ class BasePageCBV(ABC):
 
     def _create_template(self, template: str, **kwargs: Any) -> Any:
         return self.templates.TemplateResponse(
-            template, kwargs | {"request": self.request}
+            template, kwargs | self._get_additional_args()
         )
+
+    def _get_additional_args(self) -> dict[str, Any]:
+        return {"request": self.request}
 
 
 class BasePageWithAuthCBV(BasePageCBV, BaseDatabaseCBV):
@@ -22,3 +25,9 @@ class BasePageWithAuthCBV(BasePageCBV, BaseDatabaseCBV):
     @property
     def username(self) -> str:
         return self.auth[0]
+
+    def _get_additional_args(self) -> dict[str, Any]:
+        return super()._get_additional_args() | {
+            "username": self.username,
+            "panel_type": "Administrator",
+        }
