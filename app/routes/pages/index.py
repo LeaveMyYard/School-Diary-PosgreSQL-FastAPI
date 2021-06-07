@@ -4,7 +4,7 @@ from fastapi_utils.inferring_router import InferringRouter
 from fastapi_utils.cbv import cbv
 from fastapi import Depends
 from fastapi.responses import RedirectResponse
-from .base import BasePageCBV
+from .base import BasePageWithAuthCBV
 from app import schemas
 from app.routes import deps
 
@@ -12,9 +12,9 @@ router = InferringRouter()
 
 
 @cbv(router)
-class IndexPageCBV(BasePageCBV):
+class IndexPageCBV(BasePageWithAuthCBV):
     @router.get("/")
-    def get_index_page(self, username: str = Depends(deps.get_current_user)) -> Any:
+    def get_index_page(self) -> Any:
         return self._create_template(
-            "index.jinja", username=username, panel_type="Student"
+            "index.jinja", username=self.username, panel_type="Student"
         )

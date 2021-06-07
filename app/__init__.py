@@ -25,6 +25,16 @@ async def validation_exception_handler(request, exc):
     )
 
 
+@app.exception_handler(404)
+async def not_found_exception_handler(request, exc):
+    status_code = 404
+    return Jinja2Templates(directory="templates").TemplateResponse(
+        "error.jinja",
+        {"request": request, "error": exc.detail, "status_code": status_code},
+        status_code=status_code,
+    )
+
+
 @app.on_event("startup")
 def on_startup() -> None:
     connection = db.connect("postgres", "qweR1tyFUn123")

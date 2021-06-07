@@ -31,14 +31,16 @@ class BaseCRUD(abc.ABC, Generic[_Schema]):
 
     def get(self, db: pg8000.Connection, *, id: uuid.UUID) -> Optional[_Schema]:
         data = db.run(
-            "SELECT * FROM :table WHERE :id_name = :id",
-            table=self._tablename,
-            id_name=self._id_name,
+            f"SELECT * FROM {self._tablename} WHERE {self._id_name} = :id",
             id=id,
         )
         if data == []:
             return None
         return self.list_to_schema(data[0])
+
+    def get_multi(self, db: pg8000.Connection) -> list[_Schema]:
+        data = db.run(f"SELECT * FROM {self._tablename}")
+        return [self.list_to_schema(row) for row in data]
 
     @abc.abstractmethod
     def create(self, db: pg8000.Connection, *, obj: _Schema) -> None:
