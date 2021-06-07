@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 import uuid
+from datetime import datetime, timedelta
 
 
 class ClassModel(BaseModel):
@@ -7,3 +8,7 @@ class ClassModel(BaseModel):
     teacher_id: uuid.UUID
     year_started: int
     name: str
+
+    @property
+    def grade(self) -> int:
+        return (datetime.now() - timedelta(days=180)).year - self.year_started + 1

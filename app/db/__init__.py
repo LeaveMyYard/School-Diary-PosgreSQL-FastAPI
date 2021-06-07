@@ -33,7 +33,8 @@ def add_default_data(connection: pg8000.Connection) -> None:
         table_name = data_table.split("_")[1].split(".")[0]
         file_loc = os.path.join(data_dir, data_table)
         if not hasattr(crud, table_name.lower()):
-            continue
+            raise NotImplementedError(table_name)
+
         crud_obj: crud.BaseCRUD = getattr(crud, table_name.lower())
         if crud_obj.get_multi(connection) == []:
             with open(file_loc, "rb") as file:

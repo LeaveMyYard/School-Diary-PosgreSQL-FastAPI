@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS Mark(
     homeworkID UUID,
     description TEXT NOT NULL DEFAULT '',
     FOREIGN KEY(lessonID) REFERENCES Lesson(lessonID),
-    FOREIGN KEY(studentID) REFERENCES Student(studentID),
-    UNIQUE(lessonID, studentID)
+    FOREIGN KEY(studentID) REFERENCES Student(studentID)
 );
 END $$;
