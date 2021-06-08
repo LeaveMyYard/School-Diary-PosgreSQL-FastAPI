@@ -7,6 +7,7 @@ from .student import StudentCRUD
 from .parent import ParentCRUD
 from .parenttostudent import ParentToStudentCRUD
 from .lesson import LessonCRUD
+from .presence import PresenceCRUD
 
 teacher = TeacherCRUD()
 course = CourseCRUD()
@@ -16,3 +17,4 @@ student = StudentCRUD()
 parent = ParentCRUD()
 parenttostudent = ParentToStudentCRUD()
 lesson = LessonCRUD()
+presence = PresenceCRUD()

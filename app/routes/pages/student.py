@@ -45,12 +45,20 @@ class StudentPageCBV(BasePageWithAuthCBV):
                     raise RuntimeError(lesson.course_id)
                 course_data[lesson.course_id] = course
 
+        presence: dict[uuid.UUID, bool] = {
+            lesson.lesson_id: crud.presence.get_by_student_and_lesson(
+                self.db, student_id=student_id, lesson_id=lesson.lesson_id
+            )
+            for lesson in lessons
+        }
+
         return self._create_template(
             "student_diary.jinja",
             student=student,
             class_data=class_data,
             lessons=lessons,
             course_data=course_data,
+            presence=presence,
             day=day,
             timedelta=timedelta,
         )

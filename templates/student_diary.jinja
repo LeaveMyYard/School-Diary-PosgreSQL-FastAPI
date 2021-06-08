@@ -36,7 +36,7 @@
                                         <td> {{ lesson.audience }} </td>
                                         <td> Do something at home </td>
                                         <td> 10, 12 </td>
-                                        <td> Absent </td>
+                                        <td> {{"Present" if presence[lesson.lesson_id] else "Absent"}} </td>
                                       </tr>
                                     {% endfor %}
                                   </tbody>
