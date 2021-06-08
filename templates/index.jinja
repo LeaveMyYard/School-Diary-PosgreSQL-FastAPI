@@ -1,3 +1,61 @@
 {% include "header.jinja"%}
+    <link href="{{ url_for('static', path='/css/teacher.css') }}" rel="stylesheet">
+    <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/school.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h5 class="f-w-600">Online School</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">Birthday</th>
+                                      <th scope="col">Link</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for teacher in teachers %}
+                                      <tr>
+                                        <td> {{ teacher.full_name }} </td>
+                                        <td> {{ teacher.date_of_birth }} </td>
+                                        <td> <a href="/teacher/{{ teacher.teacher_id }}/" class="btn btn-sm btn-outline-dark"> Teacher page </a> </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                                <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Class name</th>
+                                      <th scope="col">Link</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for class in classes %}
+                                      <tr>
+                                        <td> {{ class.grade }}-{{class.name}} </td>
+                                        <td> <a href="/class/{{ class.class_id }}/" class="btn btn-sm btn-outline-dark"> Class page </a> </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% include "footer.jinja" %}

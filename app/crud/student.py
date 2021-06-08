@@ -21,3 +21,16 @@ class StudentCRUD(BaseCRUD[StudentModel]):
     ) -> list[StudentModel]:
         data = db.run(f"SELECT * FROM Student WHERE Student.classID = '{class_id}'")
         return [self.list_to_schema(row) for row in data]
+
+    def get_multi_by_parent(
+        self, db: pg8000.Connection, *, parent_id: uuid.UUID
+    ) -> list[StudentModel]:
+        data = db.run(
+            "SELECT * FROM Student "
+            "INNER JOIN ParentToStudent "
+            "ON Student.studentID = ParentToStudent.studentID "
+            "INNER JOIN Parent "
+            "ON Parent.parentID = ParentToStudent.parentID "
+            f"WHERE Parent.parentID = '{parent_id}'"
+        )
+        return [self.list_to_schema(row) for row in data]

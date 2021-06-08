@@ -11,3 +11,7 @@ class ParentModel(BaseModel):
     date_of_birth: date
     status: str
     email: str
+
+    @property
+    def age(self) -> int:
+        return (date.today() - self.date_of_birth).days // 365

@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from datetime import date
+from datetime import date, datetime
 import uuid
 
 
@@ -13,3 +13,7 @@ class StudentModel(BaseModel):
     date_of_birth: date
     status: str
     email: str
+
+    @property
+    def age(self) -> int:
+        return (date.today() - self.date_of_birth).days // 365

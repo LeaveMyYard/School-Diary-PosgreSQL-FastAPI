@@ -6,3 +6,4 @@ from .student import *
 from .course import *
 from .year_courses import *
 from .mark import *
+from .parenttostudent import *
