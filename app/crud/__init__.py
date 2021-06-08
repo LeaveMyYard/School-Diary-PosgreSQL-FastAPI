@@ -6,6 +6,7 @@ from .yearcourses import YearCoursesCRUD
 from .student import StudentCRUD
 from .parent import ParentCRUD
 from .parenttostudent import ParentToStudentCRUD
+from .lesson import LessonCRUD
 
 teacher = TeacherCRUD()
 course = CourseCRUD()
@@ -14,3 +15,4 @@ yearcourses = YearCoursesCRUD()
 student = StudentCRUD()
 parent = ParentCRUD()
 parenttostudent = ParentToStudentCRUD()
+lesson = LessonCRUD()

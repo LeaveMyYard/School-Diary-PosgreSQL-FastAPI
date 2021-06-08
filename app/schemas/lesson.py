@@ -4,7 +4,7 @@ from datetime import date
 import uuid
 
 
-class StudentModel(BaseModel):
+class LessonModel(BaseModel):
     lesson_id: uuid.UUID = Field(default_factory=uuid.uuid4)
     course_id: uuid.UUID
     class_id: uuid.UUID

@@ -6,6 +6,7 @@ from fastapi_utils.cbv import cbv
 from .base import BasePageWithAuthCBV
 from app import schemas, crud
 from app.core import auth
+from datetime import date, timedelta
 
 router = InferringRouter()
 
@@ -20,5 +21,36 @@ class StudentPageCBV(BasePageWithAuthCBV):
         parents = crud.parent.get_multi_by_child(self.db, student_id=student_id)
         class_data = crud.classes.get(self.db, id=student.class_id)
         return self._create_template(
-            "student.jinja", student=student, parents=parents, class_data=class_data
+            "student.jinja",
+            student=student,
+            parents=parents,
+            class_data=class_data,
+            day=date.today(),
+        )
+
+    @router.get("/{student_id}/diary/")
+    def get_student_diary(self, student_id: uuid.UUID, day: date) -> Any:
+        student = crud.student.get(self.db, id=student_id)
+        if student is None:
+            raise HTTPException(404, detail="No student with such id")
+        class_data = crud.classes.get(self.db, id=student.class_id)
+        lessons = crud.lesson.get_multi_by_date_and_class(
+            self.db, class_id=student.class_id, day=day
+        )
+        course_data: dict[uuid.UUID, schemas.CourseModel] = {}
+        for lesson in lessons:
+            if lesson.course_id not in course_data:
+                course = crud.course.get(self.db, id=lesson.course_id)
+                if course is None:
+                    raise RuntimeError(lesson.course_id)
+                course_data[lesson.course_id] = course
+
+        return self._create_template(
+            "student_diary.jinja",
+            student=student,
+            class_data=class_data,
+            lessons=lessons,
+            course_data=course_data,
+            day=day,
+            timedelta=timedelta,
         )

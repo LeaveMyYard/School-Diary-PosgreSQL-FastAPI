@@ -37,6 +37,11 @@
                                         <h5 class="text-muted f-w-400"> {{ student.date_of_birth }}, {{student.age}} y.o. </h5>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <a href="/student/{{ student.student_id }}/diary/?day={{day}}" class="btn btn-sm btn-primary"> Diary </a>
+                                    </div>
+                                </div>
                                 <br/>
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Parents</h5>
                                 <table class="table table-sm">
