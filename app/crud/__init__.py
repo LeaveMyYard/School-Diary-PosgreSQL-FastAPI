@@ -8,6 +8,8 @@ from .parent import ParentCRUD
 from .parenttostudent import ParentToStudentCRUD
 from .lesson import LessonCRUD
 from .presence import PresenceCRUD
+from .mark import MarkCRUD
+from .homework import HomeworkCRUD
 
 teacher = TeacherCRUD()
 course = CourseCRUD()
@@ -18,3 +20,5 @@ parent = ParentCRUD()
 parenttostudent = ParentToStudentCRUD()
 lesson = LessonCRUD()
 presence = PresenceCRUD()
+mark = MarkCRUD()
+homework = HomeworkCRUD()

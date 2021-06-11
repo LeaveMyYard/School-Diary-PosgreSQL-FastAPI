@@ -1,5 +1,6 @@
 {% include "header.jinja"%}
     <link href="{{ url_for('static', path='/css/teacher.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
     <div class="page-content page-container" id="page-content">
     <div class="padding">
         <div class="container d-flex justify-content-center">
@@ -38,6 +39,33 @@
                                     </div>
                                 </div>
                                 <br/>
+                                <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
+                                <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Course</th>
+                                      <th scope="col">Audience</th>
+                                      <th scope="col">Class</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for lesson in lessons %}
+                                      <tr>
+                                        <td> <a href="/lesson/{{ lesson.lesson_id }}" class="btn btn-sm btn-outline-primary"> {{ lesson.lesson_number }} </a> </td>
+                                        <td> <a href="/course/{{ lesson.course_id }}" class="btn btn-sm btn-outline-secondary"> {{lesson.course_name}} </a> </td>
+                                        <td> {{ lesson.audience or "-" }} </td>
+                                        <td> <a href="/class/{{ lesson.class_id }}" class="btn btn-sm btn-outline-primary"> {{ lesson.class_display_name}} </a> </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                                <div class="d-flex justify-content-between" style="padding-top: 10px">
+                                    <a href="/teacher/{{ teacher.teacher_id }}/?day={{day - timedelta(days=1)}}" class="btn btn-sm btn-primary"> Yesterday </a>
+                                    <input data-date-format="yyyy-mm-dd" id="datepicker">
+                                    <a href="/teacher/{{ teacher.teacher_id }}/?day={{day + timedelta(days=1)}}" class="btn btn-sm btn-primary"> Tomorrow </a>
+                                </div>
+                                <br/>
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Courses</h5>
                                 <table class="table table-sm">
                                   <thead>
@@ -63,6 +91,20 @@
         </div>
     </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $('#datepicker').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+    });
+    $('#datepicker').datepicker("setDate", new Date('{{ day }}'));
+    $('#datepicker').datepicker().on("changeDate", function(e){
+        location.replace(location.href.split("?")[0] + "?day=" + e.format());
+    });
+</script>
 
 {% include "footer.jinja" %}

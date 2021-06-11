@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel, Field
 from datetime import date
 import uuid
@@ -9,4 +10,5 @@ class MarkModel(BaseModel):
     student_id: uuid.UUID
     mark_value: int
     type: str
-    description: str = ""
+    description: Optional[str]
+    homework_id: Optional[uuid.UUID]

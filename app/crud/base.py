@@ -25,10 +25,14 @@ class BaseCRUD(abc.ABC, Generic[_Schema]):
         return self.__id_name__
 
     @classmethod
-    def list_to_schema(cls, args: list[Any]) -> _Schema:
-        schema: type[_Schema] = get_args(cls.__orig_bases__[0])[0]  # type: ignore
+    def list_to_schema(
+        cls, args: list[Any], *, schema: Optional[type[_Schema]] = None
+    ) -> _Schema:
+        schema: type[_Schema] = schema or get_args(cls.__orig_bases__[0])[0]  # type: ignore
         keys = schema.__fields__
-        return schema(**dict(zip(keys, args)))
+        kwargs = dict(zip(keys, args))
+        # print(kwargs)
+        return schema(**kwargs)
 
     def get(self, db: pg8000.Connection, *, id: uuid.UUID) -> Optional[_Schema]:
         data = db.run(

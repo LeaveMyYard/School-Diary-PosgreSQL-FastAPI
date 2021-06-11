@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS Mark(
     ),
     type E_MARK_TYPE NOT NULL,
     homeworkID UUID,
-    description TEXT NOT NULL DEFAULT '',
+    description TEXT,
     FOREIGN KEY(lessonID) REFERENCES Lesson(lessonID),
     FOREIGN KEY(studentID) REFERENCES Student(studentID)
 );

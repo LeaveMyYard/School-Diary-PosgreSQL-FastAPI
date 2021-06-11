@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 import uuid
 from datetime import datetime, timedelta
+from app import core
 
 
 class ClassModel(BaseModel):
@@ -11,4 +12,8 @@ class ClassModel(BaseModel):
 
     @property
     def grade(self) -> int:
-        return (datetime.now() - timedelta(days=180)).year - self.year_started + 1
+        return core.calc_grade(self.year_started)
+
+    @property
+    def display_name(self) -> str:
+        return core.format_display_name(self.grade, self.name, self.year_started)

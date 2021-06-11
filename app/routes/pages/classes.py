@@ -21,5 +21,17 @@ class ClassPageCBV(BasePageWithAuthCBV):
         teacher = crud.teacher.get(self.db, id=class_data.teacher_id)
         students = crud.student.get_multi_by_class(self.db, class_id=class_id)
         return self._create_template(
-            "class.jinja", class_data=class_data, teacher=teacher, students=students
+            "classes/single.jinja",
+            class_data=class_data,
+            teacher=teacher,
+            students=students,
+        )
+
+    @router.get("/")
+    def get_classes_table(self) -> Any:
+        classes = crud.classes.get_multi(self.db)
+        return self._create_template(
+            "classes/table.jinja",
+            classes=classes,
+            nav=schemas.NavData(classes=True),
         )

@@ -17,4 +17,9 @@ class IndexPageCBV(BasePageWithAuthCBV):
     def get_index_page(self) -> Any:
         teachers = crud.teacher.get_multi(self.db)
         classes = crud.classes.get_multi(self.db)
-        return self._create_template("index.jinja", teachers=teachers, classes=classes)
+        return self._create_template(
+            "index.jinja",
+            teachers=teachers,
+            classes=classes,
+            nav=schemas.NavData(home=True),
+        )
