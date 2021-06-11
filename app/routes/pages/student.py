@@ -25,7 +25,7 @@ class StudentPageCBV(BasePageWithAuthCBV):
             student=student,
             parents=parents,
             class_data=class_data,
-            day=date.today(),
+            day=crud.student.get_last_lesson_day(self.db, id=student_id),
         )
 
     @router.get("/{student_id}/diary/")
