@@ -6,4 +6,4 @@ GRANT SELECT,
     UPDATE,
     DELETE ON Mark,
     Homework,
-    Presence IN SCHEMA public TO teacher;
+    Presence TO teacher;

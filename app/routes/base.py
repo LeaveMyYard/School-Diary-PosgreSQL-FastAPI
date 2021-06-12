@@ -8,3 +8,6 @@ from . import deps
 
 class BaseDatabaseCBV:
     db: pg8000.Connection = Depends(deps.get_db)
+
+class BaseAuthCBV(BaseDatabaseCBV):
+    auth: tuple[str, str] = Depends(deps.get_current_user)

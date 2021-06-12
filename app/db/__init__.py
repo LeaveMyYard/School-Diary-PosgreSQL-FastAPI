@@ -8,7 +8,7 @@ from app import crud
 
 def connect(user: str, password: str) -> pg8000.Connection:
     return pg8000.native.Connection(
-        host="postgres", port="5432", password=password, user=user
+        host="postgres", port="5432", password=password, user=user, database="postgres"
     )
 
 
