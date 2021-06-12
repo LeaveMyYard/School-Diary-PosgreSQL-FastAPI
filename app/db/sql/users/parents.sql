@@ -1,0 +1,3 @@
+CREATE ROLE parent;
+GRANT CONNECT ON DATABASE postgres TO parent;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO parent;

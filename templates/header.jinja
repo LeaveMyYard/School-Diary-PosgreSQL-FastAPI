@@ -30,10 +30,21 @@
             </li>
           </ul>
           <span class="navbar-text">
-            Welcome, {{username}}!
+            Welcome, {{username}}! 
           </span>
+          <form action="/login" method="delete" id="logoutForm" style="margin-left: 15px">
+              <button type="button" class="btn btn-outline-danger" id="logoutButton">Log out</button>
+            </form>
         </div>
       </div>
     </nav>
 
   <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+        $("#logoutButton").click(function(){        
+            $("#logoutForm").submit();
+        });
+    });
+  </script>

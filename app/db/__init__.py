@@ -41,3 +41,17 @@ def add_default_data(connection: pg8000.Connection) -> None:
                 connection.run(
                     f"COPY {table_name} FROM STDIN WITH (FORMAT CSV)", stream=file
                 )
+
+
+def add_user_roles(connection: pg8000.Connection) -> None:
+    users_dir = "app/db/sql/users"
+    users_scripts = os.listdir(users_dir)
+    for script in sorted(users_scripts):
+        script_full = os.path.join(users_dir, script)
+        with open(script_full) as file:
+            sql = file.read()
+            if sql != "":
+                try:
+                    connection.run(sql)
+                except pg8000.exceptions.DatabaseError:
+                    pass

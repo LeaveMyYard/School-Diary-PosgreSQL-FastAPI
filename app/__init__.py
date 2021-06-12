@@ -40,3 +40,4 @@ def on_startup() -> None:
     connection = db.connect("postgres", "qweR1tyFUn123")
     db.init_database(connection)
     db.add_default_data(connection)
+    db.add_user_roles(connection)

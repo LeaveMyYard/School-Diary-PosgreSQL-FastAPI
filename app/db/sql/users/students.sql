@@ -1,0 +1,3 @@
+CREATE ROLE student;
+GRANT CONNECT ON DATABASE postgres TO student;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO student;

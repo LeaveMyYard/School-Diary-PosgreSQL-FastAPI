@@ -18,10 +18,16 @@ class LoginPageCBV(BasePageCBV):
         return self._create_template("login.jinja")
 
     @router.post("/")
-    def authenticate(self, login: str = Form(...), password: str = Form(...)) -> Any:
+    def log_in(self, login: str = Form(...), password: str = Form(...)) -> Any:
         if not auth.verify_auth(schemas.AuthForm(login=login, password=password)):
             return self._create_template("login.jinja", error="Login failed")
 
         response = RedirectResponse(url="/", status_code=302)
         response.set_cookie("auth", value=f"{login}:{password}")
+        return response
+
+    @router.delete("/")
+    def log_out(self) -> Any:
+        response = RedirectResponse(url="/login", status_code=302)
+        response.remove_cookie("auth")
         return response
