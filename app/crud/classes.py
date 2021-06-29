@@ -1,6 +1,7 @@
 from app.schemas.classes import ClassModel
 from typing import Any, TypeVar, Generic
 from app.schemas import TeacherModel
+from datetime import date
 import pg8000
 import abc
 import uuid
@@ -26,3 +27,11 @@ class ClassCRUD(BaseCRUD[ClassModel]):
             f"WHERE Course.courseID = '{course_id}'"
         )
         return [self.list_to_schema(row) for row in data]
+
+    def get_last_lesson_day(self, db: pg8000.Connection, *, id: uuid.UUID) -> date:
+        data = db.run(
+            "SELECT MAX(date) " "FROM Lesson " "WHERE Lesson.classID = :id", id=id
+        )
+        if data[0][0] is None:
+            return date.today()
+        return min(data[0][0], date.today())

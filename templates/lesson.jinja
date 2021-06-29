@@ -13,6 +13,17 @@
                                 <h6 class="f-w-600">Lesson, {{course.course_name}}</h6>
                                 <p>Teacher: <a href="/teacher/{{teacher.teacher_id}}/" class="btn btn-sm btn-primary">{{ teacher.full_name }}</a></p>
                                 <p>Class: <a href="/class/{{class_obj.class_id}}/" class="btn btn-sm btn-primary">{{ class_obj.display_name }}</a></p>
+                                {% if homework is none %}
+                                  <p>Homework is not set</p>
+                                {% else %}
+                                  <p>Homework: {{homework.task}}</p>
+                                {% endif %}
+                                {% if (panel_type == "Teacher" or panel_type == "Administrator") and homework is none %}
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#homeworkModalCenter" style="margin-left: 15px; margin-bottom: 15px">Add new homework</button>
+                                {% endif %}
+                                {% if panel_type == "Teacher" or panel_type == "Administrator" %}
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#markModalCenter" style="margin-left: 15px">Add new mark</button>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-sm-8">
@@ -21,13 +32,13 @@
                                 <div class='row'>
                                   <h5 class="m-b-20 p-b-5 b-b-default f-w-600" style="margin-right:15px"> <a href="/student/{{student.student_id}}/" class="btn btn-sm btn-outline-primary">{{student.full_name}} </a></h5>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckFor{{student.student_id}}" {{"checked" if student.student_id in present_students else ""}} {{"disabled" if panel_type in ["student", "parent"] else ""}}>
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckFor{{student.student_id}}" {{"checked" if student.student_id in present_students else ""}} {{"disabled" if panel_type in ["student", "parent"] else ""}} onclick="setPresent('flexCheckFor{{student.student_id}}', '{{student.student_id}}');">
                                     <label class="form-check-label" for="flexCheckFor{{student.student_id}}">
                                       {% if student.student_id in present_students%}
                                         Present
                                       {% else %}
                                         Absent
-                                      {% endif%}
+                                      {% endif %}
                                     </label>
                                   </div>
                                 </div>
@@ -65,5 +76,154 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="homeworkModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create new homework</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="createHomeworkForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Task</label>
+            <input type="email" class="form-control" name="task" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Homework task">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="createHomeworkButton" type="button" class="btn btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#createHomeworkButton").click(function(){    
+          let data = $('#createHomeworkForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          json.lesson_id = "{{lesson.lesson_id}}";
+          $.ajax({
+              type: "POST",
+              url: '/api/homework',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
+</script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="markModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create new mark</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="createMarkForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Student</label>
+            <select class="form-control" id="exampleInputType" name="student_name">
+              {% for student in students %}
+                <option> {{student.full_name}} </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Type</label>
+            <select class="form-control" id="exampleInputType" name="type">
+              <option>homeWork</option>
+              <option>classWork</option>
+              <option>test</option>
+              <option>exam</option>
+              <option>quater</option>
+              <option>other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Mark Value</label>
+            <input type="number" class="form-control" name="mark_value" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Description</label>
+            <input class="form-control" name="description" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="createMarkButton" type="button" class="btn btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#createMarkButton").click(function(){    
+          let data = $('#createMarkForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          let student_ids = {
+            {% for student in students %}
+              "{{student.full_name}}": "{{student.student_id}}",
+            {% endfor %}
+          };
+
+          json.lesson_id = "{{lesson.lesson_id}}";
+          json.student_id = student_ids[json.student_name];
+          $.ajax({
+              type: "POST",
+              url: '/api/mark',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
+</script>
+
+<script>
+function setPresent(checkboxID, studentID){
+  $.ajax({
+        type: $('#'+checkboxID).is(":checked") ? "POST" : "DELETE",
+        url: '/api/presence',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify({student_id: studentID, lesson_id: "{{lesson.lesson_id}}"})
+    }).fail(function(data)
+        {
+          alert(data.responseJSON.detail); // show response from the php script.
+        }).done(function(data) {
+          location.reload();
+        });
+}
+</script>
 
 {% include "footer.jinja" %}

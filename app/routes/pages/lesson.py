@@ -26,6 +26,7 @@ class LessonPageCBV(BasePageWithAuthCBV):
         present_students = crud.presence.get_present_on_lesson(
             self.db, lesson_id=lesson_id
         )
+        homework = crud.homework.get_by_lesson(self.db, lesson_id=lesson_id)
         return self._create_template(
             "lesson.jinja",
             lesson=lesson,
@@ -35,4 +36,5 @@ class LessonPageCBV(BasePageWithAuthCBV):
             students=students,
             marks=marks,
             present_students=present_students,
+            homework=homework,
         )

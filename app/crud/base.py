@@ -50,7 +50,11 @@ class BaseCRUD(abc.ABC, Generic[_Schema]):
     def create(self, db: pg8000.Connection, *, obj: _Schema) -> None:
         db.run(
             f"INSERT INTO {self._tablename} VALUES "
-            "(" + ", ".join(f"'{val}'" for val in obj.dict().values()) + ")",
+            "("
+            + ", ".join(
+                f"'{val}'" if val is not None else "NULL" for val in obj.dict().values()
+            )
+            + ")",
         )
 
     @abc.abstractmethod

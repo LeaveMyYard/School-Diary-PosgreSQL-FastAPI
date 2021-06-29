@@ -1,5 +1,6 @@
 {% include "header.jinja"%}
     <link href="{{ url_for('static', path='/css/teacher.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
     <div class="page-content page-container" id="page-content">
     <div class="padding">
         <div class="container d-flex justify-content-center">
@@ -12,10 +13,59 @@
                                 <h5 class="f-w-600">{{ class_data.display_name }}</h5>
                                 <h6 class="f-w-600">Class from {{ class_data.year_started}}</h6>
                                 <p>Class Teacher: <a href="/teacher/{{class_data.teacher_id}}/" class="btn btn-sm btn-primary">{{ teacher.full_name }}</a></p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                {% if panel_type == "Administrator" %}
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#lessonModalCenter" style="margin-left: 15px; margin-bottom: 15px">Add new lesson</button>
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#yearCourseModalCenter" style="margin-left: 15px">Add new year course</button>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <div class="card-block">
+                          <div class="card-block">
+                            <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Study year: {{study_year}} </h5>
+                              <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Course</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for course in year_courses %}
+                                      <tr>
+                                        <td> {{loop.index}} </td>
+                                        <td> <a href="/course/{{ course.course_id }}" class="btn btn-sm btn-outline-secondary"> {{course.course_name}} </a> </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                            <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
+                                <table class="table table-sm">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Course</th>
+                                      <th scope="col">Audience</th>
+                                      <th scope="col">Homework</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for lesson in lessons %}
+                                      <tr>
+                                        <td> <a href="/lesson/{{ lesson.lesson_id }}" class="btn btn-sm btn-outline-primary"> {{ lesson.lesson_number }} </a> </td>
+                                        <td> <a href="/course/{{ lesson.course_id }}" class="btn btn-sm btn-outline-secondary"> {{lesson.course_name}} </a> </td>
+                                        <td> {{ lesson.audience or "-" }} </td>
+                                        <td> {{ lesson.homework or "-" }} </td>
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                                <div class="d-flex justify-content-between" style="padding-top: 10px">
+                                    <a href="/class/{{ class_data.class_id }}/?day={{day - timedelta(days=1)}}" class="btn btn-sm btn-primary"> Yesterday </a>
+                                    <input data-date-format="yyyy-mm-dd" id="datepicker">
+                                    <a href="/class/{{ class_data.class_id }}/?day={{day + timedelta(days=1)}}" class="btn btn-sm btn-primary"> Tomorrow </a>
+                                </div>
+                                <br/>
+                                <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> All students of the class </h5>
                                 <table class="table table-sm">
                                   <thead>
                                     <tr>
@@ -42,6 +92,155 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $('#datepicker').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+    });
+    $('#datepicker').datepicker("setDate", new Date('{{ day }}'));
+    $('#datepicker').datepicker().on("changeDate", function(e){
+        location.replace(location.href.split("?")[0] + "?day=" + e.format());
+    });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="lessonModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add new lesson</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="createLessonForm">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Course</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="course">
+              {% for course in year_courses %}
+                <option>{{course.course_name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Lesson number</label>
+            <input type="number" class="form-control" name="lesson_number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1-8">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Audience</label>
+            <input type="number" class="form-control" name="audience" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="404">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="createLessonButton" type="button" class="btn btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#createLessonButton").click(function(){    
+          let data = $('#createLessonForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          let course_ids = {
+            {% for course in year_courses %}
+              "{{course.course_name}}": "{{course.course_id}}",
+            {% endfor %}
+          };
+
+          json.class_id = "{{class_data.class_id}}";
+          json.date = "{{day}}";
+          json.course_id = course_ids[json.course];
+          $.ajax({
+              type: "POST",
+              url: '/api/lesson',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                  alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="yearCourseModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add new year course for {{study_year}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="createYearCourseForm">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Course</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="course">
+              {% for course in all_courses %}
+                <option>{{course.course_name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="createYearCourseButton" type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#createYearCourseButton").click(function(){    
+          let data = $('#createYearCourseForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          let course_ids = {
+            {% for course in all_courses %}
+              "{{course.course_name}}": "{{course.course_id}}",
+            {% endfor %}
+          };
+
+          json.class_id = "{{class_data.class_id}}";
+          json.year = "{{study_year}}";
+          json.course_id = course_ids[json.course];
+          $.ajax({
+              type: "POST",
+              url: '/api/yearCourses',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                  alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
+</script>
 
 
 {% include "footer.jinja" %}

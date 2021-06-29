@@ -13,6 +13,9 @@
                                 <h5 class="f-w-600">{{ teacher.full_name }}</h5>
                                 <h6 class="f-w-600">Teacher, {{ teacher.status }}</h6>
                                 <p>{{ teacher.additional_info }}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                {% if panel_type == "Administrator" %}
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#yearCourseModalCenter" style="margin-left: 15px">Add new course</button>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-sm-8">
@@ -104,6 +107,57 @@
     $('#datepicker').datepicker().on("changeDate", function(e){
         location.replace(location.href.split("?")[0] + "?day=" + e.format());
     });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="yearCourseModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add new course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="createYearCourseForm">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Course name</label>
+            <input type="text" class="form-control" name="course_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="createYearCourseButton" type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#createYearCourseButton").click(function(){    
+          let data = $('#createYearCourseForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          json.teacher_id = "{{teacher.teacher_id}}";
+          $.ajax({
+              type: "POST",
+              url: '/api/course',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                  alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
 </script>
 
 {% include "footer.jinja" %}

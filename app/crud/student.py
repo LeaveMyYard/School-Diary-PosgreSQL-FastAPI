@@ -41,6 +41,10 @@ class StudentCRUD(BaseCRUD[StudentModel]):
             "SELECT MAX(date) "
             "FROM Lesson "
             "INNER JOIN Student "
-            "ON Student.classID = Lesson.classID"
+            "ON Student.classID = Lesson.classID "
+            "WHERE Student.studentID = :id",
+            id=id,
         )
+        if data[0][0] is None:
+            return date.today()
         return min(data[0][0], date.today())

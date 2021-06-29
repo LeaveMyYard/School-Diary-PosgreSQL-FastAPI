@@ -12,6 +12,24 @@ class PresenceCRUD:
     def get_multi(self, db: pg8000.Connection) -> list[tuple[uuid.UUID, uuid.UUID]]:
         return db.run("SELECT * FROM Presence")
 
+    def create(
+        self, db: pg8000.Connection, *, student_id: uuid.UUID, lesson_id: uuid.UUID
+    ) -> None:
+        db.run(
+            "INSERT INTO Presence VALUES(:student_id, :lesson_id)",
+            student_id=student_id,
+            lesson_id=lesson_id,
+        )
+
+    def remove(
+        self, db: pg8000.Connection, *, student_id: uuid.UUID, lesson_id: uuid.UUID
+    ) -> None:
+        db.run(
+            "DELETE FROM Presence WHERE studentID = :student_id AND lessonID = :lesson_id",
+            student_id=student_id,
+            lesson_id=lesson_id,
+        )
+
     def get_by_student_and_lesson(
         self, db: pg8000.Connection, *, student_id: uuid.UUID, lesson_id: uuid.UUID
     ) -> bool:

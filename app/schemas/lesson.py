@@ -25,6 +25,11 @@ class StudentLessonModel(LessonModel):
         return ",".join(str(mark) for mark in self.marks)
 
 
+class ClassLessonModel(LessonModel):
+    homework: Optional[str]
+    course_name: str
+
+
 class TeacherLessonModel(LessonModel):
     course_name: str
     class_name: str

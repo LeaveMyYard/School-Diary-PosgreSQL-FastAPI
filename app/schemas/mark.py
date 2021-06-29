@@ -10,5 +10,5 @@ class MarkModel(BaseModel):
     student_id: uuid.UUID
     mark_value: int
     type: str
-    description: Optional[str]
     homework_id: Optional[uuid.UUID]
+    description: Optional[str]
