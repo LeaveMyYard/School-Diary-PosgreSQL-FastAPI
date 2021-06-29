@@ -25,4 +25,6 @@ class TeacherCRUD(BaseCRUD[TeacherModel]):
             "WHERE teacherID = :teacher_id",
             teacher_id=id,
         )
+        if data[0][0] is None:
+            return date.today()
         return min(data[0][0], date.today())
