@@ -41,3 +41,4 @@ def on_startup() -> None:
     db.init_database(connection)
     db.add_default_data(connection)
     db.add_user_roles(connection)
+    db.add_triggers(connection)

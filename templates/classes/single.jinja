@@ -15,7 +15,8 @@
                                 <p>Class Teacher: <a href="/teacher/{{class_data.teacher_id}}/" class="btn btn-sm btn-primary">{{ teacher.full_name }}</a></p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                 {% if panel_type == "Administrator" %}
                                   <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#lessonModalCenter" style="margin-left: 15px; margin-bottom: 15px">Add new lesson</button>
-                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#yearCourseModalCenter" style="margin-left: 15px">Add new year course</button>
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#yearCourseModalCenter" style="margin-left: 15px; margin-bottom: 15px">Add new year course</button>
+                                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#studentModalCenter" style="margin-left: 15px">Add new student</button>
                                 {% endif %}
                             </div>
                         </div>
@@ -229,6 +230,88 @@
           $.ajax({
               type: "POST",
               url: '/api/yearCourses',
+              dataType: 'json',
+              contentType: 'application/json',
+              data: JSON.stringify(json)
+          }).fail(function(data)
+              {
+                  alert(data.responseJSON.detail); // show response from the php script.
+              }).done(function(data) {
+                location.reload();
+              });
+      });
+  });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="studentModalCenter" tabindex="-1" role="dialog" aria-labelledby="homeworkModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add new student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/api/user" method="post" id="StudentForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input class="form-control" name="full_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input class="form-control" name="address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone number</label>
+            <input class="form-control" name="phone_number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Sex</label>
+            <select class="form-control" id="exampleInputType" name="sex">
+              <option>male</option>
+              <option>female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Date of birth</label>
+            <input class="form-control" data-date-format="yyyy-mm-dd" data-provide="datepicker" name="date_of_birth">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Status</label>
+            <select class="form-control" id="exampleInputType" name="status">
+              <option>current</option>
+              <option>dropped</option>
+              <option>graduated</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="StudentButton" type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $("#StudentButton").click(function(){    
+          let data = $('#StudentForm').serializeArray();
+          let json = {};
+          for (let i = 0; i < data.length; i++){
+            let obj = data[i];
+            json[obj.name] = obj.value;
+          }
+
+          json.class_id = "{{class_data.class_id}}";
+          $.ajax({
+              type: "POST",
+              url: '/api/student',
               dataType: 'json',
               contentType: 'application/json',
               data: JSON.stringify(json)
