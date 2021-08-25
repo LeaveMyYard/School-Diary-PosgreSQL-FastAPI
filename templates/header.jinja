@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/">{{panel_type}} panel</a>
+        <a class="navbar-brand" href="/">{{panel_type.capitalize()}} panel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,11 +30,14 @@
             </li>
           </ul>
           <span class="navbar-text">
-            Welcome, {{username}}! 
+            Welcome, 
+            {%if current_user_id is not none %} 
+              <a href="/{{panel_type}}/{{current_user_id}}">{{username}}</a>
+            {% else %}
+              {{username}}
+            {% endif %}
+            
           </span>
-          {% if panel_type == "Administrator" %}
-            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter" style="margin-left: 15px">Add new user</button>
-          {% endif %}
           <form action="/login" method="delete" id="logoutForm" style="margin-left: 15px">
             <button type="button" class="btn btn-outline-danger" id="logoutButton">Log out</button>
           </form>
@@ -53,65 +56,3 @@
         });
     });
   </script>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Create new user</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="/api/user" method="post" id="createUserForm">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Login</label>
-            <input type="email" class="form-control" name="login" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter login">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Enter password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputType">Role</label>
-            <select class="form-control" id="exampleInputType" name="role">
-              <option>Teacher</option>
-              <option>Student</option>
-              <option>Parent</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button id="createUserButton" type="button" class="btn btn-primary">Create</button>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  $(document).ready(function(){
-    $("#createUserButton").click(function(){    
-          let data = $('#createUserForm').serializeArray();
-          let json = {};
-          for (let i = 0; i < data.length; i++){
-            let obj = data[i];
-            json[obj.name] = obj.value;
-          }
-
-          $.ajax({
-              type: "POST",
-              url: '/api/user',
-              dataType: 'json',
-              contentType: 'application/json',
-              data: JSON.stringify(json)
-          }).fail(function(data)
-              {
-                  alert(data.responseJSON.detail); // show response from the php script.
-              }).done(function(data) {
-                location.reload();
-              });
-      });
-  });
-</script>

@@ -1,5 +1,5 @@
 from app.schemas.classes import ClassModel
-from typing import Any, TypeVar, Generic
+from typing import Any, TypeVar, Generic, Optional
 from app.schemas import ParentModel
 import pg8000
 import abc
@@ -26,3 +26,14 @@ class ParentCRUD(BaseCRUD[ParentModel]):
             f"WHERE Student.studentID = '{student_id}'"
         )
         return [self.list_to_schema(row) for row in data]
+
+    def get_by_login(
+        self, db: pg8000.Connection, *, login: str
+    ) -> Optional[ParentModel]:
+        data = db.run(
+            f"SELECT * FROM {self._tablename} WHERE login = :login",
+            login=login,
+        )
+        if data == []:
+            return None
+        return self.list_to_schema(data[0])

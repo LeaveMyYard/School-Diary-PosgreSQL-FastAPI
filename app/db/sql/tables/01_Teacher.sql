@@ -19,6 +19,8 @@ CREATE TABLE IF NOT EXISTS Teacher(
     dateOfBirth DATE NOT NULL,
     status E_TEACHER_STATUS NOT NULL,
     email TEXT NOT NULL,
+    login VARCHAR(24) NOT NULL,
+    password VARCHAR(24) NOT NULL,
     additionalInfo TEXT NOT NULL DEFAULT ''
 );
 END $$;

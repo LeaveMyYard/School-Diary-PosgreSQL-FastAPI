@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from datetime import date
 import uuid
+from typing import Optional
 
 
 class TeacherModel(BaseModel):
@@ -12,6 +13,8 @@ class TeacherModel(BaseModel):
     date_of_birth: date
     status: str
     email: str
+    login: str
+    password: str
     additional_info: str = ""
 
     @property

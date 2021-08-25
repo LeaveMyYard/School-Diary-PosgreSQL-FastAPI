@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS Parent(
     sex E_SEX NOT NULL,
     dateOfBirth DATE NOT NULL,
     status TEXT NOT NULL,
-    email TEXT NOT NULL
+    email TEXT NOT NULL,
+    login VARCHAR(24) NOT NULL,
+    password VARCHAR(24) NOT NULL
 );
 END $$;

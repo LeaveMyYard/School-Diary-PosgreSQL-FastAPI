@@ -1,5 +1,5 @@
 from app.schemas.classes import ClassModel
-from typing import Any, TypeVar, Generic
+from typing import Any, TypeVar, Generic, Optional
 from app.schemas import StudentModel
 from datetime import date
 import pg8000
@@ -48,3 +48,14 @@ class StudentCRUD(BaseCRUD[StudentModel]):
         if data[0][0] is None:
             return date.today()
         return min(data[0][0], date.today())
+
+    def get_by_login(
+        self, db: pg8000.Connection, *, login: str
+    ) -> Optional[StudentModel]:
+        data = db.run(
+            f"SELECT * FROM {self._tablename} WHERE login = :login",
+            login=login,
+        )
+        if data == []:
+            return None
+        return self.list_to_schema(data[0])

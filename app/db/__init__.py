@@ -1,9 +1,9 @@
-from typing import Any
 import pg8000.native
 import pg8000
 import os
-import csv
+
 from app import crud
+from . import constants
 
 
 def connect(user: str, password: str) -> pg8000.Connection:
@@ -30,6 +30,9 @@ def add_default_data(connection: pg8000.Connection) -> None:
     data_dir = "app/db/data"
     data_tables = os.listdir(data_dir)
     for data_table in sorted(data_tables):
+        if not data_table.endswith(".csv"):
+            continue
+
         table_name = data_table.split("_")[1].split(".")[0]
         file_loc = os.path.join(data_dir, data_table)
         if not hasattr(crud, table_name.lower()):

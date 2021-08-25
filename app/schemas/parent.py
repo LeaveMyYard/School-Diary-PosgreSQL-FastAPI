@@ -11,6 +11,8 @@ class ParentModel(BaseModel):
     date_of_birth: date
     status: str
     email: str
+    login: str
+    password: str
 
     @property
     def age(self) -> int:

@@ -1,4 +1,4 @@
-CREATE ROLE administrator;
+CREATE USER administrator WITH PASSWORD 'qweR1tyFUn123';
 GRANT CONNECT ON DATABASE postgres TO administrator;
 GRANT SELECT,
     INSERT,

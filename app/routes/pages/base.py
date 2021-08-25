@@ -1,10 +1,12 @@
 from fastapi.templating import Jinja2Templates
 from abc import ABC
-from typing import Any, TypedDict
+from typing import Any, Optional, TypedDict, Union
 from fastapi import Request, Depends
 from ..base import BaseAuthCBV
 from .. import deps
-from app import schemas
+from app import schemas, crud
+from functools import cache
+import uuid
 
 
 class BasePageCBV(ABC):
@@ -25,26 +27,36 @@ class BasePageCBV(ABC):
 class BasePageWithAuthCBV(BasePageCBV, BaseAuthCBV):
     @property
     def username(self) -> str:
+        return self.auth[1]
+
+    @property
+    def role(self) -> schemas.Role:
         return self.auth[0]
 
-    def _get_user_role(self, username: str) -> str:
-        try:
-            return self.db.run(f"""
-                WITH RECURSIVE cte AS (
-                SELECT oid FROM pg_roles WHERE rolname = '{username}'
+    @property
+    @cache
+    def current_user(
+        self,
+    ) -> Union[schemas.StudentModel, schemas.TeacherModel, schemas.ParentModel, None]:
+        if self.role == "administrator":
+            return None
+        return getattr(crud, self.role).get_by_login(self.db, login=self.username)
 
-                UNION ALL
-                SELECT m.roleid
-                FROM   cte
-                JOIN   pg_auth_members m ON m.member = cte.oid
-                )
-                SELECT oid::regrole::text AS rolename FROM cte WHERE oid::regrole::text != '{username}'"""
-            )[0][0]
-        except Exception:
-            return "administrator"
+    @property
+    def current_user_id(self) -> Optional[uuid.UUID]:
+        if self.role == "administrator":
+            return None
+        elif self.role == "teacher":
+            return self.current_user.teacher_id
+        elif self.role == "parent":
+            return self.current_user.parent_id
+        elif self.role == "student":
+            return self.current_user.student_id
+        raise NotImplementedError(self.role)
 
     def _get_additional_args(self) -> dict[str, Any]:
         return super()._get_additional_args() | {
             "username": self.username,
-            "panel_type": self._get_user_role(self.username).capitalize(),
+            "panel_type": self.role,
+            "current_user_id": self.current_user_id,
         }

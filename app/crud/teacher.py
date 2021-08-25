@@ -1,4 +1,4 @@
-from typing import Any, TypeVar, Generic
+from typing import Any, TypeVar, Generic, Optional
 from app.schemas import TeacherModel
 import pg8000
 import abc
@@ -28,3 +28,14 @@ class TeacherCRUD(BaseCRUD[TeacherModel]):
         if data[0][0] is None:
             return date.today()
         return min(data[0][0], date.today())
+
+    def get_by_login(
+        self, db: pg8000.Connection, *, login: str
+    ) -> Optional[TeacherModel]:
+        data = db.run(
+            f"SELECT * FROM {self._tablename} WHERE login = :login",
+            login=login,
+        )
+        if data == []:
+            return None
+        return self.list_to_schema(data[0])

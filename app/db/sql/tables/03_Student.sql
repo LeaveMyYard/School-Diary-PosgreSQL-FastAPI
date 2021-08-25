@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS Student(
     dateOfBirth DATE NOT NULL,
     status E_STUDENT_STATUS NOT NULL DEFAULT 'current',
     email TEXT NOT NULL,
+    login VARCHAR(24) NOT NULL,
+    password VARCHAR(24) NOT NULL,
     FOREIGN KEY(classID) REFERENCES Classes(classID)
 );
 END $$;
