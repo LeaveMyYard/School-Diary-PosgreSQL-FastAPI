@@ -38,29 +38,42 @@
                                         <h5 class="text-muted f-w-400"> {{ student.date_of_birth }}, {{student.age}} y.o. </h5>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Login</p>
+                                        <h5 class="text-muted f-w-400"> {{ student.login }}</h5>
+                                    </div>
+                                </div>
                                 <br/>
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Parents</h5>
-                                <table class="table table-sm">
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">Parent name</th>
-                                      <th scope="col">Parent status</th>
-                                      <th scope="col">Parent age</th>
-                                      <th scope="col">Parent links</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    {% for parent in parents %}
+                                {% if parents == [] %}
+                                  <h5 class="text-muted f-w-400"> There is no information about this student's parents. </h5>
+                                {% else %}
+                                  <table class="table table-sm">
+                                    <thead>
                                       <tr>
-                                        <td> {{ parent.full_name }} </td>
-                                        <td> {{ parent.status }} </td>
-                                        <td> {{ parent.age }} y.o. </td>
-                                        <td> <a href="/parent/{{ parent.parent_id }}/" class="btn btn-sm btn-outline-dark"> Parent page </a> </td>
+                                        <th scope="col">Parent name</th>
+                                        <th scope="col">Parent status</th>
+                                        <th scope="col">Parent age</th>
+                                        <th scope="col">Parent links</th>
                                       </tr>
-                                    {% endfor %}
-                                  </tbody>
-                                </table>
+                                    </thead>
+                                    <tbody>
+                                      {% for parent in parents %}
+                                        <tr>
+                                          <td> {{ parent.full_name }} </td>
+                                          <td> {{ parent.status }} </td>
+                                          <td> {{ parent.age }} y.o. </td>
+                                          <td> <a href="/parent/{{ parent.parent_id }}/" class="btn btn-sm btn-outline-dark"> Parent page </a> </td>
+                                        </tr>
+                                      {% endfor %}
+                                    </tbody>
+                                  </table>
+                                {% endif %}
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
+                                {% if lessons == [] %}
+                                  <h5 class="text-muted f-w-400"> There are no lessons for {{day.strftime("%A")}}, {{day}}. </h5>
+                                {% else %}
                                 <table class="table table-sm">
                                   <thead>
                                     <tr>
@@ -85,6 +98,7 @@
                                     {% endfor %}
                                   </tbody>
                                 </table>
+                                {% endif %}
                                 <div class="d-flex justify-content-between" style="padding-top: 10px">
                                     <a href="/student/{{ student.student_id }}/?day={{day - timedelta(days=1)}}" class="btn btn-sm btn-primary"> Yesterday </a>
                                     <input data-date-format="yyyy-mm-dd" id="datepicker">

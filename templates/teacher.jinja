@@ -41,8 +41,17 @@
                                         <h5 class="text-muted f-w-400"> {{ teacher.date_of_birth }}, {{teacher.age}} y.o. </h5>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Login</p>
+                                        <h5 class="text-muted f-w-400"> {{ teacher.login }}</h5>
+                                    </div>
+                                </div>
                                 <br/>
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
+                                {% if lessons == [] %}
+                                  <h5 class="text-muted f-w-400"> There are no lessons for {{day.strftime("%A")}}, {{day}}. </h5>
+                                {% else %}
                                 <table class="table table-sm">
                                   <thead>
                                     <tr>
@@ -63,6 +72,7 @@
                                     {% endfor %}
                                   </tbody>
                                 </table>
+                                {% endif %}
                                 <div class="d-flex justify-content-between" style="padding-top: 10px">
                                     <a href="/teacher/{{ teacher.teacher_id }}/?day={{day - timedelta(days=1)}}" class="btn btn-sm btn-primary"> Yesterday </a>
                                     <input data-date-format="yyyy-mm-dd" id="datepicker">

@@ -8,3 +8,8 @@ class CourseModel(BaseModel):
     teacher_id: uuid.UUID
     course_name: str
     old: bool = False
+
+
+class CourseTeacherModel(CourseModel):
+    teacher_name: str
+    teacher_id: uuid.UUID

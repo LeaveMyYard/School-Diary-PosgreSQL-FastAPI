@@ -1,2 +1,280 @@
-b845f1d1-cfa5-47a3-acb8-c18edfdec9ba,Ivan Bogdanov,cbff6eb2-634b-434c-822c-3057f5896a6b,Henuezska Street 12,+38066199275,male,2015-01-19,current,ivan_bogdanov@school.com,ivan_bogdanov2015,12345678
-3fc93749-5598-40ce-b801-abd65a90c5b3,Anna Bogdanova,cbff6eb2-634b-434c-822c-3057f5896a6b,Henuezska Street 12,+380668320193,female,2015-01-19,current,anna_bogdanova@school.com,anna_bogdanova2015,12345678
+b845f1d1-cfa5-47a3-acb8-c18edfdec9ba,Jenna Thomas,cbff6eb2-634b-434c-822c-3057f5896a6b,7 SW. Constitution Avenue,38066199275,female,2015-01-19,current,jennathomas@school.com,jenna_thomas2015,12345678
+3fc93749-5598-40ce-b801-abd65a90c5b3,Sadie Santos,cbff6eb2-634b-434c-822c-3057f5896a6b,"Vineland, NJ 08360",38066199276,male,2015-01-01,current,sadiesantos@school.com,sadie_santos2015,12345678
+0cccf287-cc99-4833-b60c-00a7650dcda2,Emily Marshall,cbff6eb2-634b-434c-822c-3057f5896a6b,245 Paris Hill Street,38066199277,female,2014-12-14,current,emilymarshall@school.com,emily_marshall2014,12345678
+646f1b49-a997-471c-be3b-ba7378801d49,Pat Sparks,cbff6eb2-634b-434c-822c-3057f5896a6b,"Lakeville, MN 55044",38066199278,male,2014-11-26,current,patsparks@school.com,pat_sparks2014,12345678
+97ca7127-bfa2-473e-a03e-f4a1565ee2fc,Judith Fuller,cbff6eb2-634b-434c-822c-3057f5896a6b,37 Myers St.,38066199279,female,2014-11-08,current,judithfuller@school.com,judith_fuller2014,12345678
+46336d3c-b448-425e-a3f5-9d5281f08f39,Sean Lee,cbff6eb2-634b-434c-822c-3057f5896a6b,"Oklahoma City, OK 73112",38066199280,male,2014-10-21,current,seanlee@school.com,sean_lee2014,12345678
+babe029a-0f68-48d6-a8ac-ed9a6cccf113,Toni Watts,cbff6eb2-634b-434c-822c-3057f5896a6b,8224 Shipley St.,38066199281,female,2014-10-03,current,toniwatts@school.com,toni_watts2014,12345678
+d79b0909-4af8-4cd4-81c4-e993c9b2fc1d,Michele Wagner,cbff6eb2-634b-434c-822c-3057f5896a6b,"Orange, NJ 07050",38066199282,male,2014-09-15,current,michelewagner@school.com,michele_wagner2014,12345678
+04cf5f88-1965-429f-b833-317509ae4bca,Jamie Fleming,cbff6eb2-634b-434c-822c-3057f5896a6b,37 Morris St.,38066199283,female,2014-08-28,current,jamiefleming@school.com,jamie_fleming2014,12345678
+83a5efcc-5daf-4b1c-96e3-278007509f10,Hazel Gardner,cbff6eb2-634b-434c-822c-3057f5896a6b,"Williamsburg, VA 23185",38066199284,male,2014-08-10,current,hazelgardner@school.com,hazel_gardner2014,12345678
+20265e93-4522-40da-a679-4bc870f1c4f6,Julian Lawson,d9e139ad-e920-4ece-abbc-166bed5fd8b6,9949 Bald Hill Lane,38066199285,female,2014-07-23,current,julianlawson@school.com,julian_lawson2014,12345678
+6879528a-df68-42ed-bc65-bb11ce0c740c,Theodore Taylor,d9e139ad-e920-4ece-abbc-166bed5fd8b6,"Cantonment, FL 32533",38066199286,male,2014-07-05,current,theodoretaylor@school.com,theodore_taylor2014,12345678
+59ea0d16-69e8-4d50-a16e-2929240f57b9,Jeannette Turner,d9e139ad-e920-4ece-abbc-166bed5fd8b6,8034 Charles Street,38066199287,female,2014-06-17,current,jeannetteturner@school.com,jeannette_turner2014,12345678
+61f0b60f-6deb-4c8d-b514-cee2a660906b,Dale Swanson,d9e139ad-e920-4ece-abbc-166bed5fd8b6,"Summerfield, FL 34491",38066199288,male,2014-05-30,current,daleswanson@school.com,dale_swanson2014,12345678
+25903a4d-33a4-4f5e-924d-d13e05dfcd3b,Meredith Page,d9e139ad-e920-4ece-abbc-166bed5fd8b6,74 La Sierra Lane,38066199289,female,2014-05-12,current,meredithpage@school.com,meredith_page2014,12345678
+1ee2c9d7-a625-4060-b63a-1e4f89e1cf21,Candice Kim,d9e139ad-e920-4ece-abbc-166bed5fd8b6,"Grand Blanc, MI 48439",38066199290,male,2014-04-24,current,candicekim@school.com,candice_kim2014,12345678
+e9336e19-fbc8-415c-a01f-00651aa15c69,Harriet Clayton,d9e139ad-e920-4ece-abbc-166bed5fd8b6,558 William Street,38066199291,female,2014-04-06,current,harrietclayton@school.com,harriet_clayton2014,12345678
+d15196de-626e-4b36-a501-568691809000,Jeff Lewis,d9e139ad-e920-4ece-abbc-166bed5fd8b6,"Basking Ridge, NJ 07920",38066199292,male,2014-03-19,current,jefflewis@school.com,jeff_lewis2014,12345678
+be644d74-5688-44da-9d71-3213482ddc23,Olivia Simpson,d9e139ad-e920-4ece-abbc-166bed5fd8b6,275 Beacon Ave.,38066199293,female,2014-03-01,current,oliviasimpson@school.com,olivia_simpson2014,12345678
+01aff516-3b1a-434e-989e-aedfcc8110b6,Luis Snyder,d9e139ad-e920-4ece-abbc-166bed5fd8b6,"Richardson, TX 75080",38066199294,male,2014-02-11,current,luissnyder@school.com,luis_snyder2014,12345678
+76f64d7f-c90a-4f43-a7ae-fade20a88cea,Donald Washington,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,8886 Glenlake Street,38066199295,female,2014-01-24,current,donaldwashington@school.com,donald_washington2014,12345678
+982a5f04-bee0-4705-bd87-ffccb34fa646,Darrell Marsh,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,"Naples, FL 34116",38066199296,male,2014-01-06,current,darrellmarsh@school.com,darrell_marsh2014,12345678
+4a6af662-b653-491c-9437-6ef7de5077d3,Pablo Cobb,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,801 St Louis Rd.,38066199297,female,2013-12-19,current,pablocobb@school.com,pablo_cobb2013,12345678
+9fe31db0-c561-47c1-9538-f62ebcfafec1,Jacquelyn Ramos,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,"Klamath Falls, OR 97603",38066199298,male,2013-12-01,current,jacquelynramos@school.com,jacquelyn_ramos2013,12345678
+2b1ab692-7ad5-486c-b6f5-cc91f5b04857,Andrea Pope,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,7674 Maiden St.,38066199299,female,2013-11-13,current,andreapope@school.com,andrea_pope2013,12345678
+2e43d674-97b6-41b5-86c2-659b70eb6d4e,Myrtle Briggs,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,"Sun City, AZ 85351",38066199300,male,2013-10-26,current,myrtlebriggs@school.com,myrtle_briggs2013,12345678
+9d275677-b1aa-437d-94ef-1b5fb7ba5098,Raymond Beck,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,54 Hickory Street,38066199301,female,2013-10-08,current,raymondbeck@school.com,raymond_beck2013,12345678
+f0fe948e-0837-4ba8-8692-4834f01e4736,Jody Delgado,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,"Reading, MA 01867",38066199302,male,2013-09-20,current,jodydelgado@school.com,jody_delgado2013,12345678
+a423c996-95b7-448f-8700-fb83a75df52a,Jackie Cohen,4f5809d1-f718-44b0-b2a6-54d3b0ed93de,2 Philmont Drive,38066199303,female,2013-09-02,current,jackiecohen@school.com,jackie_cohen2013,12345678
+7f4efdbb-2ddd-412b-b1c6-c4b419dc1e76,Pamela Gordon,90799946-e645-41b1-99e2-67754999c5ac,"Stevens Point, WI 54481",38066199304,male,2013-08-15,current,pamelagordon@school.com,pamela_gordon2013,12345678
+a1affade-f7e8-4812-b650-5473c33ca296,Aubrey Walton,90799946-e645-41b1-99e2-67754999c5ac,58 Jefferson Street,38066199305,female,2013-07-28,current,aubreywalton@school.com,aubrey_walton2013,12345678
+3a1595a0-ddc7-4840-805c-0eda88ac2524,Bob Gibbs,90799946-e645-41b1-99e2-67754999c5ac,"Nampa, ID 83651",38066199306,male,2013-07-10,current,bobgibbs@school.com,bob_gibbs2013,12345678
+1135abce-f3ae-41b2-9886-45916a5d12c3,Frances Fitzgerald,90799946-e645-41b1-99e2-67754999c5ac,9 Riverside St.,38066199307,female,2013-06-22,current,francesfitzgerald@school.com,frances_fitzgerald2013,12345678
+72aece17-5a1e-4ade-b5dc-131ad6478505,Katherine Vaughn,90799946-e645-41b1-99e2-67754999c5ac,"Chesapeake, VA 23320",38066199308,male,2013-06-04,current,katherinevaughn@school.com,katherine_vaughn2013,12345678
+eea8e148-3db9-4759-84fa-8d48130956cb,Gene Mckenzie,90799946-e645-41b1-99e2-67754999c5ac,404 Thatcher Ave.,38066199309,female,2013-05-17,current,genemckenzie@school.com,gene_mckenzie2013,12345678
+9da07056-014f-4f0e-9ae2-863563507651,Harry Evans,90799946-e645-41b1-99e2-67754999c5ac,"Elmont, NY 11003",38066199310,male,2013-04-29,current,harryevans@school.com,harry_evans2013,12345678
+573704c4-9b15-4e1a-a39c-5fdf736ff65a,Kevin Sandoval,90799946-e645-41b1-99e2-67754999c5ac,845 8th St.,38066199311,female,2013-04-11,current,kevinsandoval@school.com,kevin_sandoval2013,12345678
+0b34a3a9-2571-4596-a25b-c8ebc7110d11,Jessica Potter,90799946-e645-41b1-99e2-67754999c5ac,"Glenview, IL 60025",38066199312,male,2013-03-24,current,jessicapotter@school.com,jessica_potter2013,12345678
+ff1eebd0-22ed-4c7b-be02-b9055c936c04,Rene Tate,90799946-e645-41b1-99e2-67754999c5ac,124 Wentworth Lane,38066199313,female,2013-03-06,current,renetate@school.com,rene_tate2013,12345678
+20499d3e-f054-47e2-afaf-b123082eeab5,Dana Baker,66edf9e4-3f33-44df-9b67-df1a57b47227,"Apex, NC 27502",38066199314,male,2013-02-16,current,danabaker@school.com,dana_baker2013,12345678
+97cf369f-bf63-48d1-ae39-d511770e48b4,Everett Graham,66edf9e4-3f33-44df-9b67-df1a57b47227,78 Andover Ave.,38066199315,female,2013-01-29,current,everettgraham@school.com,everett_graham2013,12345678
+56fd7c4f-861a-4051-8875-3317698a1be6,Randall Tyler,66edf9e4-3f33-44df-9b67-df1a57b47227,"Naugatuck, CT 06770",38066199316,male,2013-01-11,current,randalltyler@school.com,randall_tyler2013,12345678
+569b9707-ff61-4886-9558-56960443f573,Irene Butler,66edf9e4-3f33-44df-9b67-df1a57b47227,9034 Columbia Street,38066199317,female,2012-12-24,current,irenebutler@school.com,irene_butler2012,12345678
+04429527-6110-4d01-a9f3-4b79081af471,Vicky Ball,66edf9e4-3f33-44df-9b67-df1a57b47227,"Willingboro, NJ 08046",38066199318,male,2012-12-06,current,vickyball@school.com,vicky_ball2012,12345678
+5d3999a2-4fa9-4425-ba0f-0fb1c5106dc4,Lionel Roberts,66edf9e4-3f33-44df-9b67-df1a57b47227,9688 Ramblewood St.,38066199319,female,2012-11-18,current,lionelroberts@school.com,lionel_roberts2012,12345678
+ba390e42-3eca-4996-9a44-eef9f40dcefc,Susan Schneider,66edf9e4-3f33-44df-9b67-df1a57b47227,"Seattle, WA 98144",38066199320,male,2012-10-31,current,susanschneider@school.com,susan_schneider2012,12345678
+e826bb87-ed3d-4df4-bc12-5d10f698ea38,Michelle Vega,58525b55-cd3e-43d0-b6f9-5a93c00a947a,939 North Cross Ave.,38066199321,female,2012-10-13,current,michellevega@school.com,michelle_vega2012,12345678
+d0cc60ba-635c-4fe8-95b2-37252c8c982a,Neil Hoffman,58525b55-cd3e-43d0-b6f9-5a93c00a947a,"Saint Cloud, MN 56301",38066199322,male,2012-09-25,current,neilhoffman@school.com,neil_hoffman2012,12345678
+bac504d0-9a77-494c-8d26-818c145f4ed0,Opal Baldwin,58525b55-cd3e-43d0-b6f9-5a93c00a947a,259 Woodland Lane,38066199323,female,2012-09-07,current,opalbaldwin@school.com,opal_baldwin2012,12345678
+919d4ff2-3d55-44b5-8bf3-87c53b3462b0,Salvador West,58525b55-cd3e-43d0-b6f9-5a93c00a947a,"Brainerd, MN 56401",38066199324,male,2012-08-20,current,salvadorwest@school.com,salvador_west2012,12345678
+625c4357-bfac-400d-b13f-5000a8f4c382,Beverly Parsons,58525b55-cd3e-43d0-b6f9-5a93c00a947a,79 Annadale Drive,38066199325,female,2012-08-02,current,beverlyparsons@school.com,beverly_parsons2012,12345678
+85fc53b9-3d46-42f8-a608-33131e98dbcf,Elsie Mitchell,58525b55-cd3e-43d0-b6f9-5a93c00a947a,"Opa Locka, FL 33054",38066199326,male,2012-07-15,current,elsiemitchell@school.com,elsie_mitchell2012,12345678
+d31de237-0907-4874-82a5-40e498448e19,Tonya Robbins,58525b55-cd3e-43d0-b6f9-5a93c00a947a,602 Spruce Street,38066199327,female,2012-06-27,current,tonyarobbins@school.com,tonya_robbins2012,12345678
+8ebafe63-90a5-4da9-a86d-3d999ecc2840,Timothy Armstrong,58525b55-cd3e-43d0-b6f9-5a93c00a947a,"Malvern, PA 19355",38066199328,male,2012-06-09,current,timothyarmstrong@school.com,timothy_armstrong2012,12345678
+47601379-5f6b-4080-bae5-ea937f4850c9,Percy Mendoza,42a952c1-4c75-48af-aeea-41982f31603e,9674 Brickyard St.,38066199329,female,2012-05-22,current,percymendoza@school.com,percy_mendoza2012,12345678
+4b34c733-8436-4123-abcf-c07f13038904,Roosevelt Morgan,42a952c1-4c75-48af-aeea-41982f31603e,"Farmingdale, NY 11735",38066199330,male,2012-05-04,current,rooseveltmorgan@school.com,roosevelt_morgan2012,12345678
+130963ea-d2f0-40ec-b77f-f3cc742a39d5,Janis Porter,42a952c1-4c75-48af-aeea-41982f31603e,35 Airport Court,38066199331,female,2012-04-16,current,janisporter@school.com,janis_porter2012,12345678
+d0cca4c0-8a8c-4684-84a3-0730fa044119,Geneva Reese,42a952c1-4c75-48af-aeea-41982f31603e,"Saint Joseph, MI 49085",38066199332,male,2012-03-29,current,genevareese@school.com,geneva_reese2012,12345678
+4ca4401f-dc1f-47fb-b097-6b09e27652d9,Andres Farmer,42a952c1-4c75-48af-aeea-41982f31603e,7103 E. Bellevue Dr.,38066199333,female,2012-03-11,current,andresfarmer@school.com,andres_farmer2012,12345678
+57fbf6c4-998a-421e-bf4f-88fc1289654d,Lauren Torres,42a952c1-4c75-48af-aeea-41982f31603e,"Mableton, GA 30126",38066199334,male,2012-02-22,current,laurentorres@school.com,lauren_torres2012,12345678
+e39ad219-fa68-48ba-acfe-5e90b9f3093e,April Bailey,42a952c1-4c75-48af-aeea-41982f31603e,7358 Shady Street,38066199335,female,2012-02-04,current,aprilbailey@school.com,april_bailey2012,12345678
+fac7f47d-bc9d-4331-90cb-c46ce322b790,Gail Bryan,42a952c1-4c75-48af-aeea-41982f31603e,"Catonsville, MD 21228",38066199336,male,2012-01-17,current,gailbryan@school.com,gail_bryan2012,12345678
+974968d7-d9fa-489f-8de5-0c4dbaf6deee,Ashley Higgins,42a952c1-4c75-48af-aeea-41982f31603e,8 East Durham Drive,38066199337,female,2011-12-30,current,ashleyhiggins@school.com,ashley_higgins2011,12345678
+c56e8d80-49a1-41ab-9c8a-d7b59a2151c4,Elijah Lambert,42a952c1-4c75-48af-aeea-41982f31603e,"West New York, NJ 07093",38066199338,male,2011-12-12,current,elijahlambert@school.com,elijah_lambert2011,12345678
+4f950118-f427-4915-9047-48d1cd07f517,Bennie Grant,d135f12d-43a9-4ddd-8412-cde74716262f,845 Summerhouse St.,38066199339,female,2011-11-24,current,benniegrant@school.com,bennie_grant2011,12345678
+22297ebc-7f4d-4e5f-ad11-291c83c85f74,Louise Green,d135f12d-43a9-4ddd-8412-cde74716262f,"Ballston Spa, NY 12020",38066199340,male,2011-11-06,current,louisegreen@school.com,louise_green2011,12345678
+b014412b-3d43-4953-a51d-f76e9d3337ac,Jacqueline Hunter,d135f12d-43a9-4ddd-8412-cde74716262f,151 N. Indian Spring St.,38066199341,female,2011-10-19,current,jacquelinehunter@school.com,jacqueline_hunter2011,12345678
+71c8031a-b056-404a-8cc0-4ed73aa95b43,Erica Patterson,d135f12d-43a9-4ddd-8412-cde74716262f,"Fond Du Lac, WI 54935",38066199342,male,2011-10-01,current,ericapatterson@school.com,erica_patterson2011,12345678
+dc4366c3-e948-47a8-9ddf-fcd4dd6bf915,Francis Warner,d135f12d-43a9-4ddd-8412-cde74716262f,639 Williams Drive,38066199343,female,2011-09-13,current,franciswarner@school.com,francis_warner2011,12345678
+9e948f08-a505-4fdb-95c1-1e266a629251,Jose Christensen,d135f12d-43a9-4ddd-8412-cde74716262f,"Garland, TX 75043",38066199344,male,2011-08-26,current,josechristensen@school.com,jose_christensen2011,12345678
+100e3126-f3de-4d28-bbd7-30c0c54387e4,Brett Norton,d135f12d-43a9-4ddd-8412-cde74716262f,89 E. Buttonwood Ave.,38066199345,female,2011-08-08,current,brettnorton@school.com,brett_norton2011,12345678
+d999c431-7860-49c9-83f2-66d30a5b40d3,Brenda Lamb,d135f12d-43a9-4ddd-8412-cde74716262f,"Eastlake, OH 44095",38066199346,male,2011-07-21,current,brendalamb@school.com,brenda_lamb2011,12345678
+51aff9af-2552-46b4-986e-ccdfc2d3d1f1,Tina Barnes,f8e39bae-bd74-4592-a9ba-4268ba9024a6,8345 Richardson Rd.,38066199347,female,2011-07-03,current,tinabarnes@school.com,tina_barnes2011,12345678
+98531326-bc90-4594-8bd8-6eab481622b7,Erin Olson,f8e39bae-bd74-4592-a9ba-4268ba9024a6,"Whitestone, NY 11357",38066199348,male,2011-06-15,current,erinolson@school.com,erin_olson2011,12345678
+87c4a86d-ba54-4a04-8bb6-8dbfab4d136b,Shannon Reeves,f8e39bae-bd74-4592-a9ba-4268ba9024a6,44 Rockwell Drive,38066199349,female,2011-05-28,current,shannonreeves@school.com,shannon_reeves2011,12345678
+e4191eb7-3078-4b80-b7d1-0b72acc70667,Mary Hodges,f8e39bae-bd74-4592-a9ba-4268ba9024a6,"Nicholasville, KY 40356",38066199350,male,2011-05-10,current,maryhodges@school.com,mary_hodges2011,12345678
+2a83346a-21f2-4f8c-8e97-825225c009ed,Josefina Carr,f8e39bae-bd74-4592-a9ba-4268ba9024a6,933 Brandywine Avenue,38066199351,female,2011-04-22,current,josefinacarr@school.com,josefina_carr2011,12345678
+17a3f0e6-ef1f-4307-9869-c8678e083346,Madeline Campbell,f8e39bae-bd74-4592-a9ba-4268ba9024a6,"Mason City, IA 50401",38066199352,male,2011-04-04,current,madelinecampbell@school.com,madeline_campbell2011,12345678
+4b88fb4a-5d10-48f5-8b6e-a314c2a2abb5,Cora Davidson,f8e39bae-bd74-4592-a9ba-4268ba9024a6,475 Snake Hill Street,38066199353,female,2011-03-17,current,coradavidson@school.com,cora_davidson2011,12345678
+80df153e-fa81-4c85-8ee0-0fa4343eeada,Frankie Shelton,f8e39bae-bd74-4592-a9ba-4268ba9024a6,"Lady Lake, FL 32159",38066199354,male,2011-02-27,current,frankieshelton@school.com,frankie_shelton2011,12345678
+9d4f47de-fd4e-4e20-bbb5-abf4cf5900a8,Lila Owens,8f3abaef-afd0-4e42-931d-74e50a155173,9612 Warren St.,38066199355,female,2011-02-09,current,lilaowens@school.com,lila_owens2011,12345678
+7237806e-bf7a-408f-aa66-70c806b04684,Paula Holloway,8f3abaef-afd0-4e42-931d-74e50a155173,"West Deptford, NJ 08096",38066199356,male,2011-01-22,current,paulaholloway@school.com,paula_holloway2011,12345678
+eb744162-e8b8-47ae-bda9-7841f20089b3,Kelli Hansen,8f3abaef-afd0-4e42-931d-74e50a155173,408 N. Oak Ave.,38066199357,female,2011-01-04,current,kellihansen@school.com,kelli_hansen2011,12345678
+868d0665-124e-4eca-a8e7-3d8f76b7c506,Wallace Tucker,8f3abaef-afd0-4e42-931d-74e50a155173,"Port Chester, NY 10573",38066199358,male,2010-12-17,current,wallacetucker@school.com,wallace_tucker2010,12345678
+1841b47d-6b86-4dc5-8a5f-d538bf95cee4,Gayle Boone,8f3abaef-afd0-4e42-931d-74e50a155173,5 Locust Street,38066199359,female,2010-11-29,current,gayleboone@school.com,gayle_boone2010,12345678
+d60bd4ec-a31f-43e7-9b76-b75da3f75054,Bernard Bradley,8f3abaef-afd0-4e42-931d-74e50a155173,"Stratford, CT 06614",38066199360,male,2010-11-11,current,bernardbradley@school.com,bernard_bradley2010,12345678
+6eaf151d-3279-451d-8cf2-d763b467c0be,Diana Hawkins,8f3abaef-afd0-4e42-931d-74e50a155173,13 Spruce St.,38066199361,female,2010-10-24,current,dianahawkins@school.com,diana_hawkins2010,12345678
+8c8f7801-768e-4007-aafe-ec2fccc82c97,Antoinette Abbott,8f3abaef-afd0-4e42-931d-74e50a155173,"Fairborn, OH 45324",38066199362,male,2010-10-06,current,antoinetteabbott@school.com,antoinette_abbott2010,12345678
+4291c82d-3914-406b-9ead-047b785d9ec9,Phil Osborne,8f3abaef-afd0-4e42-931d-74e50a155173,52 N. Arrowhead Ave.,38066199363,female,2010-09-18,current,philosborne@school.com,phil_osborne2010,12345678
+403d3e3b-a081-4f27-a495-b99953f4e45c,Guadalupe Mccarthy,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Smyrna, GA 30080",38066199364,male,2010-08-31,current,guadalupemccarthy@school.com,guadalupe_mccarthy2010,12345678
+0174626f-da14-4d82-a945-18747d901b6c,Earl Phelps,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,37 Oak Meadow Road,38066199365,female,2010-08-13,current,earlphelps@school.com,earl_phelps2010,12345678
+e3d50cdf-3e9c-48f5-9d4e-0521c8364d56,Courtney Oliver,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Roselle, IL 60172",38066199366,male,2010-07-26,current,courtneyoliver@school.com,courtney_oliver2010,12345678
+ad354a76-c628-44cf-8c8f-0fecf942e468,Earnest Thompson,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,9498 N. Maiden Avenue,38066199367,female,2010-07-08,current,earnestthompson@school.com,earnest_thompson2010,12345678
+80ac71d7-9b91-470f-a018-e753fd1a80da,Armando Mills,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Goodlettsville, TN 37072",38066199368,male,2010-06-20,current,armandomills@school.com,armando_mills2010,12345678
+4cad5fdf-a888-4278-8a3b-61b7a65df0fa,Isaac Parks,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,830 Sheffield Drive,38066199369,female,2010-06-02,current,isaacparks@school.com,isaac_parks2010,12345678
+82599e6e-bd3d-4ac9-9f58-7afab901323d,Scott Duncan,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Maplewood, NJ 07040",38066199370,male,2010-05-15,current,scottduncan@school.com,scott_duncan2010,12345678
+e9ac2688-5650-4d9d-989c-17109a347a31,Brandi Moreno,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,1 Vine Street,38066199371,female,2010-04-27,current,brandimoreno@school.com,brandi_moreno2010,12345678
+544f3d12-7d4d-452c-bf64-68b32151a00c,Claude Hubbard,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Silver Spring, MD 20901",38066199372,male,2010-04-09,current,claudehubbard@school.com,claude_hubbard2010,12345678
+bd8b4cb6-95f4-4c26-94e1-6d43a0e3ba27,Micheal Wong,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,95 Proctor Dr.,38066199373,female,2010-03-22,current,michealwong@school.com,micheal_wong2010,12345678
+a2e23526-ccb0-4059-b0a1-1b3083b875ea,Albert Hardy,1432cc2d-fca5-4e37-a75c-d370a7ad65fc,"Dearborn, MI 48124",38066199374,male,2010-03-04,current,alberthardy@school.com,albert_hardy2010,12345678
+d8a269d0-ea42-48a0-95a5-ca2e12d175ff,Grace Vargas,1e51a00a-fa8c-4e90-9434-692d30b13c99,41 N. George Circle,38066199375,female,2010-02-14,current,gracevargas@school.com,grace_vargas2010,12345678
+52cf744d-487a-4de3-a106-764e816f7324,Suzanne Stevens,1e51a00a-fa8c-4e90-9434-692d30b13c99,"Farmington, MI 48331",38066199376,male,2010-01-27,current,suzannestevens@school.com,suzanne_stevens2010,12345678
+60f08d79-f7e0-4e44-b2ab-28b3daed3e92,Blanca Morales,1e51a00a-fa8c-4e90-9434-692d30b13c99,992 E. Windfall Street,38066199377,female,2010-01-09,current,blancamorales@school.com,blanca_morales2010,12345678
+ac77e781-d28e-481b-99f2-35c22e25509d,Delbert Bell,1e51a00a-fa8c-4e90-9434-692d30b13c99,"Eugene, OR 97402",38066199378,male,2009-12-22,current,delbertbell@school.com,delbert_bell2009,12345678
+e6ba1157-a9e8-4f15-841c-144fa649cc7e,Roberta Roy,1e51a00a-fa8c-4e90-9434-692d30b13c99,9320 Randall Mill Avenue,38066199379,female,2009-12-04,current,robertaroy@school.com,roberta_roy2009,12345678
+c808d6bb-0d87-458d-9b67-378fbaab7844,Moses Warner,1e51a00a-fa8c-4e90-9434-692d30b13c99,"Mooresville, NC 28115",38066199380,male,2009-11-16,current,moseswarner@school.com,moses_warner2009,12345678
+ffd62fdc-c2a5-4f17-9939-fc8f730d198e,Lydia Huff,1e51a00a-fa8c-4e90-9434-692d30b13c99,72B King Road,38066199381,female,2009-10-29,current,lydiahuff@school.com,lydia_huff2009,12345678
+656f8742-eaa8-4db1-aceb-b400c7dd2888,Leo Reeves,1e51a00a-fa8c-4e90-9434-692d30b13c99,"Greenfield, IN 46140",38066199382,male,2009-10-11,current,leoreeves@school.com,leo_reeves2009,12345678
+c82c1277-3031-4505-a911-e6cc0f540ea4,Lindsay Pearson,1e51a00a-fa8c-4e90-9434-692d30b13c99,8649 Lawrence Drive,38066199383,female,2009-09-23,current,lindsaypearson@school.com,lindsay_pearson2009,12345678
+d31b0f11-e141-417c-9b47-79ddf16f823c,Jon Stanley,1e51a00a-fa8c-4e90-9434-692d30b13c99,"Groton, CT 06340",38066199384,male,2009-09-05,current,jonstanley@school.com,jon_stanley2009,12345678
+e93a211d-8ea0-4363-850c-aaf2cb3264df,Allan Payne,bd4a3263-e458-4c8b-93b7-fba6132f34c4,660 S. Logan St.,38066199385,female,2009-08-18,current,allanpayne@school.com,allan_payne2009,12345678
+f0b61453-48e2-4ca3-a067-e30a9aab1b5b,Sonja Horton,bd4a3263-e458-4c8b-93b7-fba6132f34c4,"Westland, MI 48185",38066199386,male,2009-07-31,current,sonjahorton@school.com,sonja_horton2009,12345678
+5efd40c4-0c1a-48af-83fc-fdfee80e1de2,Ramon Mendez,bd4a3263-e458-4c8b-93b7-fba6132f34c4,9799 Greenrose Dr.,38066199387,female,2009-07-13,current,ramonmendez@school.com,ramon_mendez2009,12345678
+9db39e3e-fe5d-48bf-b0a4-bb23983dcf26,Sherman Matthews,bd4a3263-e458-4c8b-93b7-fba6132f34c4,"New Kensington, PA 15068",38066199388,male,2009-06-25,current,shermanmatthews@school.com,sherman_matthews2009,12345678
+688e3242-8139-4f4e-b59e-130b07e24a0c,Miriam Alvarez,bd4a3263-e458-4c8b-93b7-fba6132f34c4,694 Gates Street,38066199389,female,2009-06-07,current,miriamalvarez@school.com,miriam_alvarez2009,12345678
+251e38ca-a404-49fa-9e84-0252d4829861,Kristin Watkins,bd4a3263-e458-4c8b-93b7-fba6132f34c4,"Mocksville, NC 27028",38066199390,male,2009-05-20,current,kristinwatkins@school.com,kristin_watkins2009,12345678
+801a394c-5a8e-4603-b43e-21223ac9cfd2,Alfredo Morton,bd4a3263-e458-4c8b-93b7-fba6132f34c4,78 Riverside Ave.,38066199391,female,2009-05-02,current,alfredomorton@school.com,alfredo_morton2009,12345678
+4e602f93-6dad-4ff6-b08e-2b73d93c7903,Hazel Marshall,bd4a3263-e458-4c8b-93b7-fba6132f34c4,"Bel Air, MD 21014",38066199392,male,2009-04-14,current,hazelmarshall@school.com,hazel_marshall2009,12345678
+b1bb6544-8066-40f0-b8c6-3c38c0710fac,Charlene Brewer,bd4a3263-e458-4c8b-93b7-fba6132f34c4,957 Carriage Street,38066199393,female,2009-03-27,current,charlenebrewer@school.com,charlene_brewer2009,12345678
+feaed796-8621-495a-9073-da1385b1591e,Charles Marsh,54fa6956-c4a0-490b-9adf-f50e7f625ced,"Windsor Mill, MD 21244",38066199394,male,2009-03-09,current,charlesmarsh@school.com,charles_marsh2009,12345678
+2961259d-3c53-45e7-8412-1c37c455cfb1,Alyssa Hudson,54fa6956-c4a0-490b-9adf-f50e7f625ced,34 N. Trusel Avenue,38066199395,female,2009-02-19,current,alyssahudson@school.com,alyssa_hudson2009,12345678
+badcd886-19ea-4535-8e2f-8914ce488ec2,Camille Hoffman,54fa6956-c4a0-490b-9adf-f50e7f625ced,"Loveland, OH 45140",38066199396,male,2009-02-01,current,camillehoffman@school.com,camille_hoffman2009,12345678
+382e6bb2-35b1-4f54-af3c-2e46d7a9ed60,Arnold Roberts,54fa6956-c4a0-490b-9adf-f50e7f625ced,7430 High Noon Dr.,38066199397,female,2009-01-14,current,arnoldroberts@school.com,arnold_roberts2009,12345678
+f33ef765-1085-47a3-89ee-d0a00e53a363,Alejandro Fletcher,54fa6956-c4a0-490b-9adf-f50e7f625ced,"Hackettstown, NJ 07840",38066199398,male,2008-12-27,current,alejandrofletcher@school.com,alejandro_fletcher2008,12345678
+799305bc-de3a-4e62-a5d9-4cb2c72edc74,Brian Ryan,54fa6956-c4a0-490b-9adf-f50e7f625ced,9 Marsh Dr.,38066199399,female,2008-12-09,current,brianryan@school.com,brian_ryan2008,12345678
+263f5d3d-1783-4331-b4cc-300b0d33830c,Henry Mathis,54fa6956-c4a0-490b-9adf-f50e7f625ced,"Muskego, WI 53150",38066199400,male,2008-11-21,current,henrymathis@school.com,henry_mathis2008,12345678
+0b2726e5-2c7e-4de2-8850-abd9d3f9649e,Evan Fowler,54fa6956-c4a0-490b-9adf-f50e7f625ced,23 Talbot St.,38066199401,female,2008-11-03,current,evanfowler@school.com,evan_fowler2008,12345678
+46eb12f0-daca-47a3-91f1-33106c3bde80,Sandra Blair,54fa6956-c4a0-490b-9adf-f50e7f625ced,"Altamonte Springs, FL 32714",38066199402,male,2008-10-16,current,sandrablair@school.com,sandra_blair2008,12345678
+4932ce73-6e0a-409f-89c2-ebbd44baff87,Luis Harper,54fa6956-c4a0-490b-9adf-f50e7f625ced,97 Rockville Ave.,38066199403,female,2008-09-28,current,luisharper@school.com,luis_harper2008,12345678
+1d290888-3f42-4321-9dcc-f1fb978a56bb,Marcia Cox,10e10b3f-8636-410f-92f6-8d3d8ddd193f,"Clarkston, MI 48348",38066199404,male,2008-09-10,current,marciacox@school.com,marcia_cox2008,12345678
+7ae28447-8bad-45eb-9276-bdb86a4e2151,Joshua Sullivan,10e10b3f-8636-410f-92f6-8d3d8ddd193f,50 Manor Station Rd.,38066199405,female,2008-08-23,current,joshuasullivan@school.com,joshua_sullivan2008,12345678
+36cbf439-2112-445f-83b6-8780c882a672,Philip Banks,10e10b3f-8636-410f-92f6-8d3d8ddd193f,"New Albany, IN 47150",38066199406,male,2008-08-05,current,philipbanks@school.com,philip_banks2008,12345678
+429ca720-3df8-4f76-a4ac-d1ebb49a321a,Bradley Turner,10e10b3f-8636-410f-92f6-8d3d8ddd193f,586 High Street,38066199407,female,2008-07-18,current,bradleyturner@school.com,bradley_turner2008,12345678
+13e6ddf6-c77f-449b-93b4-4ef05689326c,Brandon Ward,10e10b3f-8636-410f-92f6-8d3d8ddd193f,"Defiance, OH 43512",38066199408,male,2008-06-30,current,brandonward@school.com,brandon_ward2008,12345678
+f576fbb2-21e3-44da-98a9-5f902e3dada2,Clifford Stewart,10e10b3f-8636-410f-92f6-8d3d8ddd193f,200 Chestnut Drive,38066199409,female,2008-06-12,current,cliffordstewart@school.com,clifford_stewart2008,12345678
+8dc30982-84e7-425e-b9a6-aafcae8f10b8,Max Cobb,10e10b3f-8636-410f-92f6-8d3d8ddd193f,"Nashua, NH 03060",38066199410,male,2008-05-25,current,maxcobb@school.com,max_cobb2008,12345678
+4c0e0463-ce4c-4594-9d56-a21a1928cd45,Jeanne Medina,10e10b3f-8636-410f-92f6-8d3d8ddd193f,92 Andover St.,38066199411,female,2008-05-07,current,jeannemedina@school.com,jeanne_medina2008,12345678
+501a30ad-4742-418f-a322-35ec506c5046,Emma Guzman,10e10b3f-8636-410f-92f6-8d3d8ddd193f,"Addison, IL 60101",38066199412,male,2008-04-19,current,emmaguzman@school.com,emma_guzman2008,12345678
+d6cff25b-f365-4472-9609-e019b20065e9,Kellie Adkins,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,724 East Thomas Ave.,38066199413,female,2008-04-01,current,kellieadkins@school.com,kellie_adkins2008,12345678
+1250076f-f872-4c22-8191-4d31a5e89c30,Derek Burke,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,"Owensboro, KY 42301",38066199414,male,2008-03-14,current,derekburke@school.com,derek_burke2008,12345678
+ab0a991a-7dec-46a1-b360-25365eec1e36,Rosemarie Diaz,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,9118 Saxon St.,38066199415,female,2008-02-25,current,rosemariediaz@school.com,rosemarie_diaz2008,12345678
+45bedebf-dd10-4a23-b67d-2bb498e8820f,Grant Peters,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,"Taylor, MI 48180",38066199416,male,2008-02-07,current,grantpeters@school.com,grant_peters2008,12345678
+aa610160-3ac6-45dc-8db5-6a90fbcd342c,Rodney Carlson,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,884 Old York St.,38066199417,female,2008-01-20,current,rodneycarlson@school.com,rodney_carlson2008,12345678
+9cb76aee-3777-41f8-8a9b-55274d253ed6,Christopher Holt,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,"Ravenna, OH 44266",38066199418,male,2008-01-02,current,christopherholt@school.com,christopher_holt2008,12345678
+b8007672-066f-46da-b13f-aa2b2f6317fa,Alma Ruiz,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,220 Central Drive,38066199419,female,2007-12-15,current,almaruiz@school.com,alma_ruiz2007,12345678
+acd44100-b6a0-4e4c-95d8-80812228d806,Alicia Nunez,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,"San Antonio, TX 78213",38066199420,male,2007-11-27,current,alicianunez@school.com,alicia_nunez2007,12345678
+30bd47e8-4dac-46de-b2e9-41c248baa7e4,Sabrina Hamilton,aeecafd7-98fc-4546-b1a7-9d5d25d0ecf3,7699 Talbot Street,38066199421,female,2007-11-09,current,sabrinahamilton@school.com,sabrina_hamilton2007,12345678
+cf8318ed-5094-4f4b-a6a2-a0c074d28620,Jody Rios,4433ae15-7af9-4f85-adc6-349d51bbb0c2,"Ocoee, FL 34761",38066199422,male,2007-10-22,current,jodyrios@school.com,jody_rios2007,12345678
+ac7e2d59-d4fc-488c-8156-3eaf94005ef9,Henrietta Vega,4433ae15-7af9-4f85-adc6-349d51bbb0c2,18 8th Street,38066199423,female,2007-10-04,current,henriettavega@school.com,henrietta_vega2007,12345678
+57b3789b-9a16-464e-9b4e-439609245e8a,Bert Crawford,4433ae15-7af9-4f85-adc6-349d51bbb0c2,"Muskegon, MI 49441",38066199424,male,2007-09-16,current,bertcrawford@school.com,bert_crawford2007,12345678
+a1f91d54-b952-4b4e-9a8e-8cfd8e9e511b,Blake Moore,4433ae15-7af9-4f85-adc6-349d51bbb0c2,183 E. Smith Drive,38066199425,female,2007-08-29,current,blakemoore@school.com,blake_moore2007,12345678
+796a1af8-39a4-40e2-8a5c-1294ade3df38,Curtis Reynolds,4433ae15-7af9-4f85-adc6-349d51bbb0c2,"Coachella, CA 92236",38066199426,male,2007-08-11,current,curtisreynolds@school.com,curtis_reynolds2007,12345678
+33246594-e198-469a-bb3f-08d36d1bfd49,Vivian Craig,4433ae15-7af9-4f85-adc6-349d51bbb0c2,941 Applegate Drive,38066199427,female,2007-07-24,current,viviancraig@school.com,vivian_craig2007,12345678
+bd59f1bc-dcfd-493b-b468-f819bdcb5785,Claire Vaughn,4433ae15-7af9-4f85-adc6-349d51bbb0c2,"Bemidji, MN 56601",38066199428,male,2007-07-06,current,clairevaughn@school.com,claire_vaughn2007,12345678
+74bba556-4d8a-4b4e-b4a4-2584747763b6,Milton Watson,4433ae15-7af9-4f85-adc6-349d51bbb0c2,798 W. Mill Street,38066199429,female,2007-06-18,current,miltonwatson@school.com,milton_watson2007,12345678
+191cb044-49aa-45b2-a365-424b68554774,Betsy Cole,4433ae15-7af9-4f85-adc6-349d51bbb0c2,"Brandon, FL 33510",38066199430,male,2007-05-31,current,betsycole@school.com,betsy_cole2007,12345678
+205750d1-c7b7-4d1e-b993-cb2285d07697,Derrick Andrews,f3f392e4-0410-40cc-bd93-75d4a3d7a898,9909 Harrison St.,38066199431,female,2007-05-13,current,derrickandrews@school.com,derrick_andrews2007,12345678
+d36cdb53-312d-43e7-b97e-f4862b329479,George Underwood,f3f392e4-0410-40cc-bd93-75d4a3d7a898,"Cambridge, MA 02138",38066199432,male,2007-04-25,current,georgeunderwood@school.com,george_underwood2007,12345678
+4b11a6ed-741c-484f-9ee8-d66fa5722a22,Horace Doyle,f3f392e4-0410-40cc-bd93-75d4a3d7a898,177 New St.,38066199433,female,2007-04-07,current,horacedoyle@school.com,horace_doyle2007,12345678
+d343fc11-1ddc-4980-b3f5-0eb476b4f3b8,Denise Shelton,f3f392e4-0410-40cc-bd93-75d4a3d7a898,"Helena, MT 59601",38066199434,male,2007-03-20,current,deniseshelton@school.com,denise_shelton2007,12345678
+e5e80198-806c-4792-909c-5165d0f3a2f0,Lucas Nguyen,f3f392e4-0410-40cc-bd93-75d4a3d7a898,7887 Broad Dr.,38066199435,female,2007-03-02,current,lucasnguyen@school.com,lucas_nguyen2007,12345678
+9db8d98a-bf1e-4eff-b1de-4cdbb7f3eb73,Marshall Hanson,f3f392e4-0410-40cc-bd93-75d4a3d7a898,"Elk Grove Village, IL 60007",38066199436,male,2007-02-12,current,marshallhanson@school.com,marshall_hanson2007,12345678
+ae156b5e-d31b-4d96-9d15-950225da7487,Alex Schwartz,f3f392e4-0410-40cc-bd93-75d4a3d7a898,8812 Thorne Ave.,38066199437,female,2007-01-25,current,alexschwartz@school.com,alex_schwartz2007,12345678
+59e0a83d-0446-4ef1-add1-2650db2ab76b,Marc West,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"Houston, TX 77016",38066199438,male,2007-01-07,current,marcwest@school.com,marc_west2007,12345678
+a7457761-521d-4e58-ba3d-6d91977b8ceb,Carla Reese,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,11 S. River Lane,38066199439,female,2006-12-20,current,carlareese@school.com,carla_reese2006,12345678
+70c3715f-f4a8-4199-92fd-657bbc76aa23,Brandi Olson,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"Huntersville, NC 28078",38066199440,male,2006-12-02,current,brandiolson@school.com,brandi_olson2006,12345678
+87f9b678-bb04-43e2-a663-b51e9df0ab69,Doris Sharp,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,580 Crescent Lane,38066199441,female,2006-11-14,current,dorissharp@school.com,doris_sharp2006,12345678
+fcddf99f-9362-489e-a272-99703c12581f,Kathleen Collins,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"Yorktown, VA 23693",38066199442,male,2006-10-27,current,kathleencollins@school.com,kathleen_collins2006,12345678
+a21daea2-f4c7-4488-8c08-b14b48d8037c,Kara Woods,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,40 East Elmwood Street,38066199443,female,2006-10-09,current,karawoods@school.com,kara_woods2006,12345678
+88c3ca9e-9bea-468a-88b5-038fa07a1bd6,Wilbur Holmes,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"North Canton, OH 44720",38066199444,male,2006-09-21,current,wilburholmes@school.com,wilbur_holmes2006,12345678
+ce0edf13-5477-46f4-ac89-da3215207185,Eunice Phillips,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,936 Marconi St.,38066199445,female,2006-09-03,current,eunicephillips@school.com,eunice_phillips2006,12345678
+e1cf0f71-3bd5-4292-bfe1-e83191f90a34,Marvin Vasquez,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"Avon Lake, OH 44012",38066199446,male,2006-08-16,current,marvinvasquez@school.com,marvin_vasquez2006,12345678
+152b9a8f-7c7f-430b-bcaa-5d85464abaae,Silvia Lynch,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,9633 NE. Hartford St.,38066199447,female,2006-07-29,current,silvialynch@school.com,silvia_lynch2006,12345678
+67a7b170-2a6c-44ea-9a18-cf60d5ce2656,Elsie Daniel,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,"Kennewick, WA 99337",38066199448,male,2006-07-11,current,elsiedaniel@school.com,elsie_daniel2006,12345678
+bbb76c66-6521-42ac-8a81-704dfdd8f0f0,Johnathan Obrien,6d0e69e4-80a2-48f6-b61a-82f3c972fbd2,8701 Court Street,38066199449,female,2006-06-23,current,johnathanobrien@school.com,johnathan_obrien2006,12345678
+c3b09122-a77c-4502-9f75-784db0a98a72,Glen Mcdaniel,757144f2-4270-4dcd-a05c-0e72ec012d76,"Findlay, OH 45840",38066199450,male,2006-06-05,current,glenmcdaniel@school.com,glen_mcdaniel2006,12345678
+df8eb906-1f7e-4709-81fe-0f05612f97fa,Eva Stone,757144f2-4270-4dcd-a05c-0e72ec012d76,418 South Hall Dr.,38066199451,female,2006-05-18,current,evastone@school.com,eva_stone2006,12345678
+a7aec1e3-193a-407e-9fc7-1569e2392f46,Theresa Mason,757144f2-4270-4dcd-a05c-0e72ec012d76,"La Porte, IN 46350",38066199452,male,2006-04-30,current,theresamason@school.com,theresa_mason2006,12345678
+16c4e054-847f-480c-9e98-d1325b1252e9,Micheal Cruz,757144f2-4270-4dcd-a05c-0e72ec012d76,7656 Buckingham Street,38066199453,female,2006-04-12,current,michealcruz@school.com,micheal_cruz2006,12345678
+8a8a4642-9be2-4892-ad9f-88748aac19be,Cheryl Armstrong,757144f2-4270-4dcd-a05c-0e72ec012d76,"Point Pleasant Beach, NJ 08742",38066199454,male,2006-03-25,current,cherylarmstrong@school.com,cheryl_armstrong2006,12345678
+45d42908-1e7e-4d78-bce7-1b441dd6fe1a,Adam Glover,757144f2-4270-4dcd-a05c-0e72ec012d76,24 Gregory Street,38066199455,female,2006-03-07,current,adamglover@school.com,adam_glover2006,12345678
+0f386d1c-b40a-4e14-a13f-d66a5a8e1453,Doreen Richards,757144f2-4270-4dcd-a05c-0e72ec012d76,"Freeport, NY 11520",38066199456,male,2006-02-17,current,doreenrichards@school.com,doreen_richards2006,12345678
+a3f5e88f-63c7-492f-a2ec-14db81a6d763,Eloise Ross,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,572 Halifax Drive,38066199457,female,2006-01-30,current,eloiseross@school.com,eloise_ross2006,12345678
+92deebfb-dfb4-4541-9df8-e96dbcb88894,Tommie Morris,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,"Alexandria, VA 22304",38066199458,male,2006-01-12,current,tommiemorris@school.com,tommie_morris2006,12345678
+c5cefdb0-d638-4586-bc83-50450a78cb24,Sheri Fitzgerald,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,954 Depot Street,38066199459,female,2005-12-25,current,sherifitzgerald@school.com,sheri_fitzgerald2005,12345678
+ea06b523-6c4f-4652-ad6b-27d860ec4c6a,Cristina Higgins,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,"Abingdon, MD 21009",38066199460,male,2005-12-07,current,cristinahiggins@school.com,cristina_higgins2005,12345678
+79d780c9-146d-40d1-8086-460ada6e6158,Jan King,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,43 Lexington St.,38066199461,female,2005-11-19,current,janking@school.com,jan_king2005,12345678
+47b131e4-e1c8-4528-bc7f-8ec06915e3e2,Constance Nelson,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,"Bakersfield, CA 93306",38066199462,male,2005-11-01,current,constancenelson@school.com,constance_nelson2005,12345678
+7482d90b-e1c6-4141-a51d-31ef2c74e432,Leroy Jennings,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,6 Shub Farm St.,38066199463,female,2005-10-14,current,leroyjennings@school.com,leroy_jennings2005,12345678
+2da5ca9b-9ab4-4b08-b57e-cf360bc3d519,Shawna Pittman,fac6680c-0ff0-4db7-b90c-d8bb20dbff1e,"Fullerton, CA 92831",38066199464,male,2005-09-26,current,shawnapittman@school.com,shawna_pittman2005,12345678
+93bbe29d-7f6b-490c-a672-d098d0767c4c,Ervin Roberson,7021e32d-17d1-4ced-aa4d-738927c4a24a,312 Essex Ave.,38066199465,female,2005-09-08,current,ervinroberson@school.com,ervin_roberson2005,12345678
+200ecb84-1d06-4fcc-b2f6-f80fc944307a,Gloria Simpson,7021e32d-17d1-4ced-aa4d-738927c4a24a,"Port Charlotte, FL 33952",38066199466,male,2005-08-21,current,gloriasimpson@school.com,gloria_simpson2005,12345678
+62ec22ae-3b92-40a3-af1e-f91f81d94afc,Bethany James,7021e32d-17d1-4ced-aa4d-738927c4a24a,925 S. Oak Valley St.,38066199467,female,2005-08-03,current,bethanyjames@school.com,bethany_james2005,12345678
+5f205fd1-8e43-4faa-ae3a-9fb0b75803bc,Francis Rowe,7021e32d-17d1-4ced-aa4d-738927c4a24a,"South Ozone Park, NY 11420",38066199468,male,2005-07-16,current,francisrowe@school.com,francis_rowe2005,12345678
+fcd879f8-13ca-4728-80b5-09c4b5a48441,Angelica Wade,ce2669ec-3f04-42ad-89c5-303f964926c7,469 Amerige Street,38066199469,female,2005-06-28,current,angelicawade@school.com,angelica_wade2005,12345678
+28687c3c-ad50-4051-a13c-68d1b2d52738,Bryant Murray,ce2669ec-3f04-42ad-89c5-303f964926c7,"Birmingham, AL 35209",38066199470,male,2005-06-10,current,bryantmurray@school.com,bryant_murray2005,12345678
+93d0831b-652e-4608-afed-aa62c01087e5,Carlos Walsh,ce2669ec-3f04-42ad-89c5-303f964926c7,9662 Sulphur Springs St.,38066199471,female,2005-05-23,current,carloswalsh@school.com,carlos_walsh2005,12345678
+eda818f1-eeda-4787-9853-3a1b1d07eb16,Shaun Gilbert,ce2669ec-3f04-42ad-89c5-303f964926c7,"Greensburg, PA 15601",38066199472,male,2005-05-05,current,shaungilbert@school.com,shaun_gilbert2005,12345678
+6131eee8-1056-4a51-9591-675ee2be00ef,Esther Weaver,ce2669ec-3f04-42ad-89c5-303f964926c7,9740 E. Fairfield Ave.,38066199473,female,2005-04-17,current,estherweaver@school.com,esther_weaver2005,12345678
+bc97b82e-a040-4dd3-a634-32956d8b66b6,Joanna Chapman,ce2669ec-3f04-42ad-89c5-303f964926c7,"Warminster, PA 18974",38066199474,male,2005-03-30,current,joannachapman@school.com,joanna_chapman2005,12345678
+0ca8251e-2b0d-4b53-bb85-48286999c19d,Shirley Rivera,ce2669ec-3f04-42ad-89c5-303f964926c7,8703 Helen Court,38066199475,female,2005-03-12,current,shirleyrivera@school.com,shirley_rivera2005,12345678
+595b1ad1-cf1a-45e4-a195-f464b18d154b,Elvira Price,ce2669ec-3f04-42ad-89c5-303f964926c7,"Montclair, NJ 07042",38066199476,male,2005-02-22,current,elviraprice@school.com,elvira_price2005,12345678
+4e79c53c-3258-49cb-a317-2b45bbf872f2,Gilbert May,ce2669ec-3f04-42ad-89c5-303f964926c7,12 Devon Ave.,38066199477,female,2005-02-04,current,gilbertmay@school.com,gilbert_may2005,12345678
+9221448f-a782-4f69-84ab-4b0588eb5040,Neal Cox,ce2669ec-3f04-42ad-89c5-303f964926c7,"Canonsburg, PA 15317",38066199478,male,2005-01-17,current,nealcox@school.com,neal_cox2005,12345678
+1c727edc-623b-4726-8f2b-09aa744b5a69,Bertha Murray,ce2669ec-3f04-42ad-89c5-303f964926c7,8166 Hickory Street,38066199479,female,2004-12-30,current,berthamurray@school.com,bertha_murray2004,12345678
+f3cfc72e-4aea-4f23-bff0-6e470f47043c,Ken Robertson,ce2669ec-3f04-42ad-89c5-303f964926c7,"Paramus, NJ 07652",38066199480,male,2004-12-12,current,kenrobertson@school.com,ken_robertson2004,12345678
+82fe898e-3606-4cd9-96fd-cce63435c4a1,Lynn Mcbride,ce2669ec-3f04-42ad-89c5-303f964926c7,7904 Orange St.,38066199481,female,2004-11-24,current,lynnmcbride@school.com,lynn_mcbride2004,12345678
+91c6b53d-0d6e-4742-a615-ddf146c830d8,Eva Fletcher,ce2669ec-3f04-42ad-89c5-303f964926c7,"Glastonbury, CT 06033",38066199482,male,2004-11-06,current,evafletcher@school.com,eva_fletcher2004,12345678
+c70d2432-311e-47ec-b800-5396d2e89c85,Yolanda Martinez,ce2669ec-3f04-42ad-89c5-303f964926c7,8568A St Louis Lane,38066199483,female,2004-10-19,current,yolandamartinez@school.com,yolanda_martinez2004,12345678
+d03d4508-9aa7-41eb-8ca0-30656f593b72,Jody Carson,ce2669ec-3f04-42ad-89c5-303f964926c7,"Wellington, FL 33414",38066199484,male,2004-10-01,current,jodycarson@school.com,jody_carson2004,12345678
+44a08faa-e7d3-49b3-875d-d814f2b6f247,Kristopher Watkins,ce2669ec-3f04-42ad-89c5-303f964926c7,7448 NW. Wayne Avenue,38066199485,female,2004-09-13,current,kristopherwatkins@school.com,kristopher_watkins2004,12345678
+5cd9afbb-44e6-4d41-85d4-138f2ad93dd1,Paulette Young,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"La Crosse, WI 54601",38066199486,male,2004-08-26,current,pauletteyoung@school.com,paulette_young2004,12345678
+880041bf-d930-4033-8461-92428f4e504b,Jose Perkins,3e480253-ac67-4fe5-aaa7-65d7070f7e35,1 Princeton Ave.,38066199487,female,2004-08-08,current,joseperkins@school.com,jose_perkins2004,12345678
+25772134-e3ec-4488-9068-e73a985b305c,Jackie Todd,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Syosset, NY 11791",38066199488,male,2004-07-21,current,jackietodd@school.com,jackie_todd2004,12345678
+3e1b4e3e-b48e-42b9-a890-69cfc460b83a,Denise Moran,3e480253-ac67-4fe5-aaa7-65d7070f7e35,27 Morris Street,38066199489,female,2004-07-03,current,denisemoran@school.com,denise_moran2004,12345678
+bde09a27-d3b9-42f1-a9c6-b5189991d015,Grace Evans,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Painesville, OH 44077",38066199490,male,2004-06-15,current,graceevans@school.com,grace_evans2004,12345678
+9f2c2d48-9962-493a-b3c1-b3716a239ac6,Christie Bennett,3e480253-ac67-4fe5-aaa7-65d7070f7e35,7077 Sheffield Road,38066199491,female,2004-05-28,current,christiebennett@school.com,christie_bennett2004,12345678
+6aac868f-ea4f-4cd7-8b54-06366f463a8b,Vickie Sutton,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Minot, ND 58701",38066199492,male,2004-05-10,current,vickiesutton@school.com,vickie_sutton2004,12345678
+a5379c3a-53c7-4672-a369-217421877a80,Todd Bowman,3e480253-ac67-4fe5-aaa7-65d7070f7e35,625 E. Cedar Swamp Rd.,38066199493,female,2004-04-22,current,toddbowman@school.com,todd_bowman2004,12345678
+1a1231a8-9850-4ec4-acc2-24ba00f695c2,Damon Pearson,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Beaver Falls, PA 15010",38066199494,male,2004-04-04,current,damonpearson@school.com,damon_pearson2004,12345678
+6a4a6db0-0445-4c12-bcd8-b35fc6676b0b,Ruben Anderson,3e480253-ac67-4fe5-aaa7-65d7070f7e35,131 Oak Valley Street,38066199495,female,2004-03-17,current,rubenanderson@school.com,ruben_anderson2004,12345678
+60c9810c-d4fe-4291-b0b9-a252110eb75a,Jack Palmer,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Danville, VA 24540",38066199496,male,2004-02-28,current,jackpalmer@school.com,jack_palmer2004,12345678
+3cba6403-37cd-4e3c-9564-471d52f49716,Aaron Mcguire,3e480253-ac67-4fe5-aaa7-65d7070f7e35,9596 County St.,38066199497,female,2004-02-10,current,aaronmcguire@school.com,aaron_mcguire2004,12345678
+83eb440d-4428-47eb-ab41-4938b3e7dec7,Cristina Keller,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"West Islip, NY 11795",38066199498,male,2004-01-23,current,cristinakeller@school.com,cristina_keller2004,12345678
+267387d6-6ce6-41f8-95d4-02f76be3409c,Corey Diaz,3e480253-ac67-4fe5-aaa7-65d7070f7e35,285 Shub Farm Rd.,38066199499,female,2004-01-05,current,coreydiaz@school.com,corey_diaz2004,12345678
+92ad0f42-457a-4568-acbb-c0e0abbacd8f,Lorene Cummings,3e480253-ac67-4fe5-aaa7-65d7070f7e35,"Racine, WI 53402",38066199500,male,2003-12-18,current,lorenecummings@school.com,lorene_cummings2003,12345678
+3cf78782-6bf6-4dc8-bd6a-a2832c8b5ad9,Violet Rodriquez,4a7dff7e-58bb-496f-a48b-0e0208b595b1,960 W. Surrey Avenue,38066199501,female,2003-11-30,current,violetrodriquez@school.com,violet_rodriquez2003,12345678
+25342303-5b95-48f3-98b2-644d23eea759,Orlando Hansen,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Vienna, VA 22180",38066199502,male,2003-11-12,current,orlandohansen@school.com,orlando_hansen2003,12345678
+5e01aca9-6b7d-49d6-a20d-1e1b295a130c,Stacy Hogan,4a7dff7e-58bb-496f-a48b-0e0208b595b1,949 Pilgrim Rd.,38066199503,female,2003-10-25,current,stacyhogan@school.com,stacy_hogan2003,12345678
+b9373cc1-99e3-4b05-b8e7-9ced670466f0,Wayne Richardson,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Fernandina Beach, FL 32034",38066199504,male,2003-10-07,current,waynerichardson@school.com,wayne_richardson2003,12345678
+6d5e3e95-ba93-45dc-ad12-908ad1d47649,Michael Wade,4a7dff7e-58bb-496f-a48b-0e0208b595b1,303 Cypress St.,38066199505,female,2003-09-19,current,michaelwade@school.com,michael_wade2003,12345678
+4325cf48-86ed-4726-b065-bc9c29446616,Gladys Bradley,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Myrtle Beach, SC 29577",38066199506,male,2003-09-01,current,gladysbradley@school.com,gladys_bradley2003,12345678
+8703ec6b-ed09-4986-aa92-12029697d5c8,Sherri Townsend,4a7dff7e-58bb-496f-a48b-0e0208b595b1,4 Selby Drive,38066199507,female,2003-08-14,current,sherritownsend@school.com,sherri_townsend2003,12345678
+5d6871c8-e2dc-4ea3-a42d-6256622e7cf1,Rene Beck,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Warwick, RI 02886",38066199508,male,2003-07-27,current,renebeck@school.com,rene_beck2003,12345678
+38bc63f3-6d0a-4b70-92c8-fbe6375f94ab,Grady Ramirez,4a7dff7e-58bb-496f-a48b-0e0208b595b1,7096 White Street,38066199509,female,2003-07-09,current,gradyramirez@school.com,grady_ramirez2003,12345678
+27cbe2d6-b6b9-4344-a2bc-057de649b89e,Jimmie Herrera,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Murfreesboro, TN 37128",38066199510,male,2003-06-21,current,jimmieherrera@school.com,jimmie_herrera2003,12345678
+e6d5e56a-ffb2-49ca-b144-56d2eb11cc15,Eleanor Stone,4a7dff7e-58bb-496f-a48b-0e0208b595b1,10 10th Dr.,38066199511,female,2003-06-03,current,eleanorstone@school.com,eleanor_stone2003,12345678
+a2c9c6b1-cfc9-411c-b725-51c2b9a8eb33,Lillie Black,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Fresh Meadows, NY 11365",38066199512,male,2003-05-16,current,lillieblack@school.com,lillie_black2003,12345678
+b0ab04dd-10fa-43d2-aadb-69e0f1645c1a,Terrance Huff,4a7dff7e-58bb-496f-a48b-0e0208b595b1,9544 Bay Ave.,38066199513,female,2003-04-28,current,terrancehuff@school.com,terrance_huff2003,12345678
+1f61f42a-effd-47be-8110-9e72b8d3bb7b,Toby Soto,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Macon, GA 31204",38066199514,male,2003-04-10,current,tobysoto@school.com,toby_soto2003,12345678
+0d69dcdb-444e-42da-872d-68fa4fcf56b2,Elias Roberson,4a7dff7e-58bb-496f-a48b-0e0208b595b1,40 Washington St.,38066199515,female,2003-03-23,current,eliasroberson@school.com,elias_roberson2003,12345678
+6a720ee6-3ea8-41fd-b77a-bf0c173da165,Leland Mendoza,4a7dff7e-58bb-496f-a48b-0e0208b595b1,"Bettendorf, IA 52722",38066199516,male,2003-03-05,current,lelandmendoza@school.com,leland_mendoza2003,12345678
+333bd645-6751-4f63-982d-9abcd9f156d8,Cora Holt,57421531-340c-47be-a1d0-64958da06175,8653 Paris Hill St.,38066199517,female,2003-02-15,current,coraholt@school.com,cora_holt2003,12345678
+9946cde2-31cb-4ad0-a2d9-6d5fbbdb9083,Roxanne Dunn,57421531-340c-47be-a1d0-64958da06175,"Belmont, MA 02478",38066199518,male,2003-01-28,current,roxannedunn@school.com,roxanne_dunn2003,12345678
+5e01822e-b609-41cd-8e66-2aa7e60df45d,Tiffany Rice,57421531-340c-47be-a1d0-64958da06175,8 North Branch Ave.,38066199519,female,2003-01-10,current,tiffanyrice@school.com,tiffany_rice2003,12345678
+1bffe302-02c3-4e57-8720-f7a539bca009,Franklin Martin,57421531-340c-47be-a1d0-64958da06175,"Brookline, MA 02446",38066199520,male,2002-12-23,current,franklinmartin@school.com,franklin_martin2002,12345678
+d31d0cdb-64c9-4039-b3fa-e3f6b42dc377,Lela Kim,57421531-340c-47be-a1d0-64958da06175,8501 Winding Way Ave.,38066199521,female,2002-12-05,current,lelakim@school.com,lela_kim2002,12345678
+2ccabd80-8353-4754-a745-fb3fa54803e5,Connie Estrada,57421531-340c-47be-a1d0-64958da06175,"Port Jefferson Station, NY 11776",38066199522,male,2002-11-17,current,connieestrada@school.com,connie_estrada2002,12345678
+7972aba5-56cc-42fc-9d2f-301daa6e9595,Chris Brewer,57421531-340c-47be-a1d0-64958da06175,7891 E. Vernon St.,38066199523,female,2002-10-30,current,chrisbrewer@school.com,chris_brewer2002,12345678
+2e729dfa-cfd5-4b7b-98dc-0efa479bf562,Edmund Oliver,57421531-340c-47be-a1d0-64958da06175,"Janesville, WI 53546",38066199524,male,2002-10-12,current,edmundoliver@school.com,edmund_oliver2002,12345678
+3eb76b65-43f2-4a3e-9f82-935747a730b5,Sally Pratt,57421531-340c-47be-a1d0-64958da06175,7701 S. Ketch Harbour Dr.,38066199525,female,2002-09-24,current,sallypratt@school.com,sally_pratt2002,12345678
+c0ce2f0f-c404-4459-b485-b86ec9a70777,Erica Jackson,57421531-340c-47be-a1d0-64958da06175,"Eau Claire, WI 54701",38066199526,male,2002-09-06,current,ericajackson@school.com,erica_jackson2002,12345678
+0056221d-d985-4155-b512-7600236a064b,Amos Bass,57421531-340c-47be-a1d0-64958da06175,320 Pearl Lane,38066199527,female,2002-08-19,current,amosbass@school.com,amos_bass2002,12345678
+4ca4a1fd-a2d4-4691-a846-aef6fa33dce7,Lisa Robbins,57421531-340c-47be-a1d0-64958da06175,"New Rochelle, NY 10801",38066199528,male,2002-08-01,current,lisarobbins@school.com,lisa_robbins2002,12345678
+264df1f0-e5e4-4c90-9b63-173374fad51c,Carol Cannon,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,8544 Saxon Circle,38066199529,female,2002-07-14,current,carolcannon@school.com,carol_cannon2002,12345678
+40291022-3471-44bd-86af-2d19f2cbe791,Simon Sharp,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Oxnard, CA 93035",38066199530,male,2002-06-26,current,simonsharp@school.com,simon_sharp2002,12345678
+81de5cde-1a0e-48f2-a55d-81ff29ebc63d,Della Simpson,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,7977 W. Bow Ridge Rd.,38066199531,female,2002-06-08,current,dellasimpson@school.com,della_simpson2002,12345678
+5ea90872-a753-4d7c-89e3-7f793e97eebd,Frederick Dean,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Southaven, MS 38671",38066199532,male,2002-05-21,current,frederickdean@school.com,frederick_dean2002,12345678
+be532737-028d-4e21-ba91-86011f8d5012,Horace Carpenter,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,37 Bow Ridge Rd.,38066199533,female,2002-05-03,current,horacecarpenter@school.com,horace_carpenter2002,12345678
+9b9d5836-dbe4-452a-96cb-b0c08240ca6b,Harry Newman,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Front Royal, VA 22630",38066199534,male,2002-04-15,current,harrynewman@school.com,harry_newman2002,12345678
+5168c140-1193-4c7a-9364-cfab62e0268f,Tara Grant,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,178 Franklin Ave.,38066199535,female,2002-03-28,current,taragrant@school.com,tara_grant2002,12345678
+1d98ff0f-fd70-42cd-a640-d15d55d8d016,Conrad Kelly,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Fort Myers, FL 33905",38066199536,male,2002-03-10,current,conradkelly@school.com,conrad_kelly2002,12345678
+afc763a8-c291-4c81-a7b8-9d8a184bf3cf,Eduardo Rodriguez,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,6 SW. Academy Avenue,38066199537,female,2002-02-20,current,eduardorodriguez@school.com,eduardo_rodriguez2002,12345678
+bc4840cd-be06-45eb-971f-1a4c60bb4374,Troy Fuller,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Mount Juliet, TN 37122",38066199538,male,2002-02-02,current,troyfuller@school.com,troy_fuller2002,12345678
+9e4a4186-e0f5-49d0-8dcd-ddc19d9a02cb,Don Matthews,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,8694 Santa Clara Avenue,38066199539,female,2002-01-15,current,donmatthews@school.com,don_matthews2002,12345678
+6d2b2cb4-6b94-4606-9537-8e5250040565,Alexis White,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Haines City, FL 33844",38066199540,male,2001-12-28,current,alexiswhite@school.com,alexis_white2001,12345678
+5a8e3752-54b5-467f-8c5b-0d4f2ad54c1a,Marilyn Butler,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,665 North Gates Drive,38066199541,female,2001-12-10,current,marilynbutler@school.com,marilyn_butler2001,12345678
+3e8d0ea2-deac-46fa-8f9d-d31b649ac4be,Shelia Simmons,0f766bf2-9d79-4050-9aa0-e0e1e1a2d5e2,"Snellville, GA 30039",38066199542,male,2001-11-22,current,sheliasimmons@school.com,shelia_simmons2001,12345678
+9398b99d-8a3f-4c3a-850e-0751c4bc7f72,Leticia Murphy,d3066fad-83de-43c4-bc41-edae450bcd78,39 Greenrose Circle,38066199543,female,2001-11-04,current,leticiamurphy@school.com,leticia_murphy2001,12345678
+c2ef64ae-4d67-4c67-99f7-58117ed58228,Clint Quinn,d3066fad-83de-43c4-bc41-edae450bcd78,"Miami Gardens, FL 33056",38066199544,male,2001-10-17,current,clintquinn@school.com,clint_quinn2001,12345678
+e3218f28-fae1-4687-b852-db5aba8add1c,Jessica Richards,d3066fad-83de-43c4-bc41-edae450bcd78,60 Myers Court,38066199545,female,2001-09-29,current,jessicarichards@school.com,jessica_richards2001,12345678
+5b334350-1afb-4057-bce7-0122bc974b35,Drew Moody,d3066fad-83de-43c4-bc41-edae450bcd78,"Vista, CA 92083",38066199546,male,2001-09-11,current,drewmoody@school.com,drew_moody2001,12345678
+19b9eee0-1f05-40a6-b62f-a0419a6de7cc,Joan Patton,d3066fad-83de-43c4-bc41-edae450bcd78,262 Cleveland Court,38066199547,female,2001-08-24,current,joanpatton@school.com,joan_patton2001,12345678
+6e32a075-223c-4ba5-b731-72ff5559a12f,Stewart Ruiz,d3066fad-83de-43c4-bc41-edae450bcd78,"Kearny, NJ 07032",38066199548,male,2001-08-06,current,stewartruiz@school.com,stewart_ruiz2001,12345678
+071a1a28-84be-40e9-901e-cefe3e85191d,Michelle Owens,d3066fad-83de-43c4-bc41-edae450bcd78,8842 Pin Oak Street,38066199549,female,2001-07-19,current,michelleowens@school.com,michelle_owens2001,12345678
+3d54927b-60c2-46b3-a0ac-8221961b14a4,Randy Freeman,d3066fad-83de-43c4-bc41-edae450bcd78,"Park Ridge, IL 60068",38066199550,male,2001-07-01,current,randyfreeman@school.com,randy_freeman2001,12345678
+067db841-a70c-44df-a3d5-6e54cfe3ef40,Cesar Banks,d3066fad-83de-43c4-bc41-edae450bcd78,9 N. Somerset St.,38066199551,female,2001-06-13,current,cesarbanks@school.com,cesar_banks2001,12345678
+f85b07f3-79a0-4286-8f01-2f597428b198,Daniel Morgan,d3066fad-83de-43c4-bc41-edae450bcd78,"Bloomfield, NJ 07003",38066199552,male,2001-05-26,current,danielmorgan@school.com,daniel_morgan2001,12345678
+f88cb332-dd18-42f9-9ff5-53ade84a5fed,Preston Craig,d3066fad-83de-43c4-bc41-edae450bcd78,193 Snake Hill St.,38066199553,female,2001-05-08,current,prestoncraig@school.com,preston_craig2001,12345678
+ae59953e-8913-4054-bd21-e03ee1506807,Mamie Stevenson,d3066fad-83de-43c4-bc41-edae450bcd78,"Fremont, OH 43420",38066199554,male,2001-04-20,current,mamiestevenson@school.com,mamie_stevenson2001,12345678

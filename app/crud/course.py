@@ -1,4 +1,5 @@
 from typing import Any, TypeVar, Generic
+from app import schemas
 from app.schemas import CourseModel
 import pg8000
 import abc
@@ -22,3 +23,12 @@ class CourseCRUD(BaseCRUD[CourseModel]):
             "ORDER BY old",
         )
         return [self.list_to_schema(row) for row in data]
+
+    def get_multi(self, db: pg8000.Connection) -> list[schemas.CourseTeacherModel]:
+        data = db.run(
+            "SELECT Course.courseid, Course.teacherid, Course.coursename, Course.old, Teacher.fullName, Teacher.teacherID "
+            "FROM Course "
+            "INNER JOIN Teacher "
+            "ON Teacher.teacherid = Course.teacherid "
+        )
+        return [self.list_to_schema(row, schema=schemas.CourseTeacherModel) for row in data]

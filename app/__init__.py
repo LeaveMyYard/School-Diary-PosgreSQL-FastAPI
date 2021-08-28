@@ -25,14 +25,17 @@ async def validation_exception_handler(request, exc):
     )
 
 
-@app.exception_handler(404)
-async def not_found_exception_handler(request, exc):
-    status_code = 404
-    return Jinja2Templates(directory="templates").TemplateResponse(
-        "error.jinja",
-        {"request": request, "error": exc.detail, "status_code": status_code},
-        status_code=status_code,
-    )
+DEFAULT_ERROR_CODES = [404, 403, 400, 401]
+
+for error in DEFAULT_ERROR_CODES:
+
+    @app.exception_handler(error)
+    async def exception_handler(request, exc, status_code=error):
+        return Jinja2Templates(directory="templates").TemplateResponse(
+            "error.jinja",
+            {"request": request, "error": exc.detail, "status_code": status_code},
+            status_code=status_code,
+        )
 
 
 @app.on_event("startup")

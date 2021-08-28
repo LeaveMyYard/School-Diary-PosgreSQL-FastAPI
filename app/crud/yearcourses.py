@@ -1,3 +1,4 @@
+from app import schemas
 from app.schemas.course import CourseModel
 from app.schemas.classes import ClassModel
 from typing import Any, TypeVar, Generic
@@ -31,15 +32,20 @@ class YearCoursesCRUD:
 
     def get_multi_by_course_and_year(
         self, db: pg8000.Connection, *, class_id: uuid.UUID, year: int
-    ) -> list[CourseModel]:
+    ) -> list[schemas.CourseTeacherModel]:
         data = db.run(
-            "SELECT * "
+            "SELECT Course.courseid, Course.teacherid, Course.coursename, Course.old, Teacher.fullName, Teacher.teacherID "
             "FROM Course "
             "INNER JOIN YearCourses "
             "ON Course.courseID = YearCourses.courseID "
+            "INNER JOIN Teacher "
+            "ON Teacher.teacherid = Course.teacherid "
             "WHERE YearCourses.year = :year "
             "AND YearCourses.classID = :class_id",
             class_id=class_id,
             year=year,
         )
-        return [CourseCRUD.list_to_schema(row) for row in data]
+        return [
+            CourseCRUD.list_to_schema(row, schema=schemas.CourseTeacherModel)
+            for row in data
+        ]

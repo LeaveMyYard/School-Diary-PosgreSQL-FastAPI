@@ -57,6 +57,6 @@ class BasePageWithAuthCBV(BasePageCBV, BaseAuthCBV):
     def _get_additional_args(self) -> dict[str, Any]:
         return super()._get_additional_args() | {
             "username": self.username,
-            "panel_type": self.role,
+            "panel_type": self.role.capitalize(),
             "current_user_id": self.current_user_id,
         }

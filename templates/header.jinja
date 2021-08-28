@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/">{{panel_type.capitalize()}} panel</a>
+        <a class="navbar-brand" href="/">{{panel_type}} panel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,7 +32,7 @@
           <span class="navbar-text">
             Welcome, 
             {%if current_user_id is not none %} 
-              <a href="/{{panel_type}}/{{current_user_id}}">{{username}}</a>
+              <a href="/{{panel_type.lower()}}/{{current_user_id}}">{{username}}</a>
             {% else %}
               {{username}}
             {% endif %}

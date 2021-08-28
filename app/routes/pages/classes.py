@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any, Optional, cast
 import uuid
 from fastapi import HTTPException
 from fastapi_utils.inferring_router import InferringRouter
@@ -18,6 +18,26 @@ class ClassPageCBV(BasePageWithAuthCBV):
         class_data = crud.classes.get(self.db, id=class_id)
         if class_data is None:
             raise HTTPException(404, detail="No class with such id")
+
+        # Student can only get access to his own class
+        if self.role == "student":
+            if cast(schemas.StudentModel, self.current_user).class_id != class_id:
+                raise HTTPException(
+                    403, detail="You can only see information about your own class."
+                )
+
+        if self.role == "parent":
+            students = crud.student.get_multi_by_parent(
+                self.db,
+                parent_id=cast(schemas.ParentModel, self.current_user).parent_id,
+            )
+            if all(student.class_id != class_id for student in students):
+                raise HTTPException(
+                    403,
+                    detail="You can only see information "
+                    "about your own children's classes.",
+                )
+
         day = day or crud.classes.get_last_lesson_day(self.db, id=class_id)
         teacher = crud.teacher.get(self.db, id=class_data.teacher_id)
         students = crud.student.get_multi_by_class(self.db, class_id=class_id)

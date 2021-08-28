@@ -1,6 +1,7 @@
 from fastapi import Cookie, HTTPException, Depends
 from typing import Optional
 from app import db, schemas
+from app.core import auth as auth_module
 import pg8000
 
 
@@ -11,6 +12,10 @@ def get_current_user(
         raise HTTPException(401, detail="Not authorized")
 
     role, login, password = auth.split(":")
+    if not auth_module.verify_auth(
+        schemas.AuthForm(role=role, login=login, password=password)
+    ):
+        raise HTTPException(400, "Invalid login data")
     return role, login, password
 
 
