@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any, Optional, cast
 import uuid
 from fastapi import HTTPException
 from fastapi_utils.inferring_router import InferringRouter
@@ -26,8 +26,25 @@ class StudentPageCBV(BasePageWithAuthCBV):
         lessons = crud.lesson.get_multi_by_date_and_student(
             self.db, student_id=student_id, day=day
         )
+
+        if self.role == "student":
+            show_diary = (
+                student.student_id
+                == cast(schemas.StudentModel, self.current_user).student_id
+            )
+        elif self.role == "parent":
+            show_diary = any(
+                child.student_id == student.student_id
+                for child in crud.student.get_multi_by_parent(
+                    self.db, parent_id=self.current_user_id
+                )
+            )
+        else:
+            show_diary = True
+
         return self._create_template(
             "student.jinja",
+            show_diary=show_diary,
             student=student,
             parents=parents,
             class_data=class_data,

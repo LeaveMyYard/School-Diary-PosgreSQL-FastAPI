@@ -70,40 +70,42 @@
                                     </tbody>
                                   </table>
                                 {% endif %}
-                                <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
-                                {% if lessons == [] %}
-                                  <h5 class="text-muted f-w-400"> There are no lessons for {{day.strftime("%A")}}, {{day}}. </h5>
-                                {% else %}
-                                <table class="table table-sm">
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">#</th>
-                                      <th scope="col">Course</th>
-                                      <th scope="col">Audience</th>
-                                      <th scope="col">Homework</th>
-                                      <th scope="col">Marks</th>
-                                      <th scope="col">Present</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    {% for lesson in lessons %}
+                                {% if show_diary %}
+                                  <h5 class="m-b-20 p-b-5 b-b-default f-w-600"> Diary for {{day.strftime("%A")}}, {{day}} </h5>
+                                  {% if lessons == [] %}
+                                    <h5 class="text-muted f-w-400"> There are no lessons for {{day.strftime("%A")}}, {{day}}. </h5>
+                                  {% else %}
+                                  <table class="table table-sm">
+                                    <thead>
                                       <tr>
-                                        <td> <a href="/lesson/{{ lesson.lesson_id }}" class="btn btn-sm btn-outline-primary"> {{ lesson.lesson_number }} </a> </td>
-                                        <td> <a href="/course/{{ lesson.course_id }}" class="btn btn-sm btn-outline-secondary"> {{lesson.course_name}} </a> </td>
-                                        <td> {{ lesson.audience or "-" }} </td>
-                                        <td> {{ lesson.homework or "-"}} </td>
-                                        <td> {{ lesson.marks_data }} </td>
-                                        <td> {{ lesson.present}} </td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Course</th>
+                                        <th scope="col">Audience</th>
+                                        <th scope="col">Homework</th>
+                                        <th scope="col">Marks</th>
+                                        <th scope="col">Present</th>
                                       </tr>
-                                    {% endfor %}
-                                  </tbody>
-                                </table>
-                                {% endif %}
+                                    </thead>
+                                    <tbody>
+                                      {% for lesson in lessons %}
+                                        <tr>
+                                          <td> <a href="/lesson/{{ lesson.lesson_id }}" class="btn btn-sm btn-outline-primary"> {{ lesson.lesson_number }} </a> </td>
+                                          <td> <a href="/course/{{ lesson.course_id }}" class="btn btn-sm btn-outline-secondary"> {{lesson.course_name}} </a> </td>
+                                          <td> {{ lesson.audience or "-" }} </td>
+                                          <td> {{ lesson.homework or "-"}} </td>
+                                          <td> {{ lesson.marks_data }} </td>
+                                          <td> {{ lesson.present}} </td>
+                                        </tr>
+                                      {% endfor %}
+                                    </tbody>
+                                  </table>
+                                  {% endif %}
                                 <div class="d-flex justify-content-between" style="padding-top: 10px">
                                     <a href="/student/{{ student.student_id }}/?day={{day - timedelta(days=1)}}" class="btn btn-sm btn-primary"> Yesterday </a>
                                     <input data-date-format="yyyy-mm-dd" id="datepicker">
                                     <a href="/student/{{ student.student_id }}/?day={{day + timedelta(days=1)}}" class="btn btn-sm btn-primary"> Tomorrow </a>
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

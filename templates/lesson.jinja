@@ -42,29 +42,31 @@
                                     </label>
                                   </div>
                                 </div>
-                                {% if marks[student.student_id] != [] %}
-                                  <table class="table table-sm">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">Mark</th>
-                                        <th scope="col">Type</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Homework</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      {% for mark in marks[student.student_id] %}
+                                {% if panel_type == "Teacher" or panel_type == "Administrator" %}
+                                  {% if marks[student.student_id] != [] %}
+                                    <table class="table table-sm">
+                                      <thead>
                                         <tr>
-                                          <td> {{mark.mark_value}} </td>
-                                          <td> {{mark.type}} </td>
-                                          <td> {{mark.description or "-"}} </td>
-                                          <td> {{mark.homework_id}} </td>
+                                          <th scope="col">Mark</th>
+                                          <th scope="col">Type</th>
+                                          <th scope="col">Description</th>
+                                          <th scope="col">Homework</th>
                                         </tr>
-                                      {% endfor %}
-                                    </tbody>
-                                  </table>
-                                {% else %}
-                                  <h6 class="f-w-600"> No marks </h6>
+                                      </thead>
+                                      <tbody>
+                                        {% for mark in marks[student.student_id] %}
+                                          <tr>
+                                            <td> {{mark.mark_value}} </td>
+                                            <td> {{mark.type}} </td>
+                                            <td> {{mark.description or "-"}} </td>
+                                            <td> {{mark.homework_id}} </td>
+                                          </tr>
+                                        {% endfor %}
+                                      </tbody>
+                                    </table>
+                                  {% else %}
+                                    <h6 class="f-w-600"> No marks </h6>
+                                  {% endif %}
                                 {% endif %}
                               {% endfor %}
                             </div>
