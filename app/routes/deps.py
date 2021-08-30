@@ -1,5 +1,5 @@
 from fastapi import Cookie, HTTPException, Depends
-from typing import Optional
+from typing import Iterator, Optional
 from app import db, schemas
 from app.core import auth as auth_module
 import pg8000
@@ -21,15 +21,20 @@ def get_current_user(
 
 def get_db(
     auth: tuple[schemas.Role, str, str] = Depends(get_current_user)
-) -> pg8000.Connection:
+) -> Iterator[pg8000.Connection]:
     role, _, _ = auth
     if role == "administrator":
-        return db.connect(db.constants.ADMIN_USER, db.constants.PASSWORD)
-    if role == "teacher":
-        return db.connect(db.constants.TEACHER_USER, db.constants.PASSWORD)
-    if role == "student":
-        return db.connect(db.constants.STUDENT_USER, db.constants.PASSWORD)
-    if role == "parent":
-        return db.connect(db.constants.PARENT_USER, db.constants.PASSWORD)
+        conn = db.connect(db.constants.ADMIN_USER, db.constants.PASSWORD)
+    elif role == "teacher":
+        conn = db.connect(db.constants.TEACHER_USER, db.constants.PASSWORD)
+    elif role == "student":
+        conn = db.connect(db.constants.STUDENT_USER, db.constants.PASSWORD)
+    elif role == "parent":
+        conn = db.connect(db.constants.PARENT_USER, db.constants.PASSWORD)
+    else:
+        raise NotImplementedError(role)
 
-    raise NotImplementedError(role)
+    try:
+        yield conn
+    finally:
+        conn.close()
